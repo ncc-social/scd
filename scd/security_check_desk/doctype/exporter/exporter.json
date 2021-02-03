@@ -14,6 +14,9 @@
   "postal_address",
   "phone_number",
   "email",
+  "business_name",
+  "business_address",
+  "business_phone_number",
   "id_type",
   "id_number",
   "image"
@@ -76,12 +79,27 @@
    "fieldtype": "Attach Image",
    "hidden": 1,
    "label": "Image"
+  },
+  {
+   "fieldname": "business_name",
+   "fieldtype": "Data",
+   "label": "Business Name"
+  },
+  {
+   "fieldname": "business_address",
+   "fieldtype": "Data",
+   "label": "Business Address"
+  },
+  {
+   "fieldname": "business_phone_number",
+   "fieldtype": "Data",
+   "label": "Business Phone Number"
   }
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-03 13:40:20.991507",
+ "modified": "2021-02-03 14:07:17.732408",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Exporter",
