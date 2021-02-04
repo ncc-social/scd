@@ -18,7 +18,7 @@ class Exporter(Document):
 		self.full_name = ' '.join(filter(lambda x: x, [self.first_name, self.middle_name, self.last_name]))
 
 	def validate_date(self):
-		if self.date_of_birth and getdate(self.date_of_birth) >= getdate(today():
+		if self.date_of_birth and getdate(self.date_of_birth) >= getdate(today()):
 			throw(_("Date of Birth cannot be today or a future date."))
 
 	def validate_email(self):
