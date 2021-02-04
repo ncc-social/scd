@@ -6,20 +6,33 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "first_name",
-  "middle_name",
+  "bio_data_section",
   "last_name",
+  "middle_name",
+  "first_name",
   "full_name",
-  "residential_address",
+  "image",
+  "column_break_5",
+  "date_of_birth",
+  "place_of_birth",
+  "region_place_of_birth",
+  "hometown",
+  "region_hometown",
+  "column_break_7",
+  "place_of_residence",
   "postal_address",
   "phone_number",
-  "email",
+  "personal_email",
+  "business_details_section",
   "business_name",
   "business_address",
   "business_phone_number",
+  "column_break_16",
+  "business_email",
   "id_type",
   "id_number",
-  "image"
+  "attachments_section",
+  "uploads"
  ],
  "fields": [
   {
@@ -44,11 +57,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "residential_address",
-   "fieldtype": "Data",
-   "label": "Residential Address"
-  },
-  {
    "fieldname": "postal_address",
    "fieldtype": "Data",
    "label": "Postal Address"
@@ -57,11 +65,6 @@
    "fieldname": "phone_number",
    "fieldtype": "Data",
    "label": "Phone Number"
-  },
-  {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email"
   },
   {
    "fieldname": "id_type",
@@ -94,12 +97,89 @@
    "fieldname": "business_phone_number",
    "fieldtype": "Data",
    "label": "Business Phone Number"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "uploads",
+   "fieldtype": "Table",
+   "label": "Uploads",
+   "options": "Exporter Attachments"
+  },
+  {
+   "fieldname": "bio_data_section",
+   "fieldtype": "Section Break",
+   "label": "Bio Data"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "business_details_section",
+   "fieldtype": "Section Break",
+   "label": "Business Details"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "business_email",
+   "fieldtype": "Data",
+   "label": "Business Email"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "place_of_birth",
+   "fieldtype": "Data",
+   "label": "Place of Birth"
+  },
+  {
+   "fieldname": "personal_email",
+   "fieldtype": "Data",
+   "label": "Personal Email"
+  },
+  {
+   "fieldname": "region_place_of_birth",
+   "fieldtype": "Link",
+   "label": "Region (Place of Birth)",
+   "options": "Region"
+  },
+  {
+   "fieldname": "hometown",
+   "fieldtype": "Data",
+   "label": "Hometown"
+  },
+  {
+   "fieldname": "region_hometown",
+   "fieldtype": "Link",
+   "label": "Region (Hometown)",
+   "options": "Region"
+  },
+  {
+   "fieldname": "place_of_residence",
+   "fieldtype": "Data",
+   "label": "Place of Residence"
   }
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-03 14:07:17.732408",
+ "modified": "2021-02-04 08:47:06.929706",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Exporter",
