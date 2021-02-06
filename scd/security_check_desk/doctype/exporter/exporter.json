@@ -1,15 +1,15 @@
 {
  "actions": [],
- "autoname": "EXPORTER-",
+ "autoname": "EXP-.YY.-.#####",
  "creation": "2021-02-03 13:37:35.484449",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "bio_data_section",
-  "last_name",
-  "middle_name",
   "first_name",
+  "middle_name",
+  "last_name",
   "full_name",
   "image",
   "column_break_5",
@@ -18,21 +18,27 @@
   "region_place_of_birth",
   "hometown",
   "region_hometown",
+  "residential_address",
   "column_break_7",
-  "place_of_residence",
+  "popular_landmark",
   "postal_address",
   "phone_number",
   "personal_email",
+  "id_type",
+  "id_number",
   "business_details_section",
+  "occupation",
   "business_name",
   "business_address",
   "business_phone_number",
   "column_break_16",
   "business_email",
-  "id_type",
-  "id_number",
   "attachments_section",
-  "uploads"
+  "id",
+  "column_break_30",
+  "fingerprint_impressions",
+  "section_break_32",
+  "business_info"
  ],
  "fields": [
   {
@@ -64,7 +70,8 @@
   {
    "fieldname": "phone_number",
    "fieldtype": "Data",
-   "label": "Phone Number"
+   "label": "Phone Number",
+   "options": "Phone"
   },
   {
    "fieldname": "id_type",
@@ -80,8 +87,7 @@
   {
    "fieldname": "image",
    "fieldtype": "Attach Image",
-   "hidden": 1,
-   "label": "Image"
+   "label": "Picture"
   },
   {
    "fieldname": "business_name",
@@ -96,19 +102,13 @@
   {
    "fieldname": "business_phone_number",
    "fieldtype": "Data",
-   "label": "Business Phone Number"
+   "label": "Business Phone Number",
+   "options": "Phone"
   },
   {
-   "collapsible": 1,
    "fieldname": "attachments_section",
    "fieldtype": "Section Break",
    "label": "Attachments"
-  },
-  {
-   "fieldname": "uploads",
-   "fieldtype": "Table",
-   "label": "Uploads",
-   "options": "Exporter Attachments"
   },
   {
    "fieldname": "bio_data_section",
@@ -120,7 +120,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "collapsible": 1,
    "fieldname": "business_details_section",
    "fieldtype": "Section Break",
    "label": "Business Details"
@@ -136,7 +135,8 @@
   {
    "fieldname": "business_email",
    "fieldtype": "Data",
-   "label": "Business Email"
+   "label": "Business Email",
+   "options": "Email"
   },
   {
    "fieldname": "date_of_birth",
@@ -151,7 +151,8 @@
   {
    "fieldname": "personal_email",
    "fieldtype": "Data",
-   "label": "Personal Email"
+   "label": "Personal Email",
+   "options": "Email"
   },
   {
    "fieldname": "region_place_of_birth",
@@ -171,15 +172,49 @@
    "options": "Region"
   },
   {
-   "fieldname": "place_of_residence",
+   "fieldname": "residential_address",
    "fieldtype": "Data",
-   "label": "Place of Residence"
+   "label": "Residential Address"
+  },
+  {
+   "fieldname": "popular_landmark",
+   "fieldtype": "Data",
+   "label": "Popular Landmark"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "id",
+   "fieldtype": "Attach Image",
+   "label": "ID"
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fingerprint_impressions",
+   "fieldtype": "Attach Image",
+   "label": "Fingerprint Impressions"
+  },
+  {
+   "fieldname": "business_info",
+   "fieldtype": "Table",
+   "label": "Business Info",
+   "options": "Business Authorisation"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break"
   }
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-04 08:47:06.929706",
+ "modified": "2021-02-06 15:28:12.493983",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Exporter",
