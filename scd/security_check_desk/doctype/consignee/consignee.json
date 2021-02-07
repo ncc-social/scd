@@ -6,20 +6,13 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "consignee",
+  "consignee_name",
   "address",
   "column_break_3",
+  "consignee_country",
   "phone_number"
  ],
  "fields": [
-  {
-   "fieldname": "consignee",
-   "fieldtype": "Data",
-   "in_global_search": 1,
-   "in_list_view": 1,
-   "label": "Consignee Name",
-   "reqd": 1
-  },
   {
    "fieldname": "address",
    "fieldtype": "Data",
@@ -34,11 +27,27 @@
   {
    "fieldname": "column_break_3",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consignee_country",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "consignee_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Consignee Name",
+   "reqd": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-06 17:18:29.054503",
+ "modified": "2021-02-07 06:53:26.401119",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Consignee",
@@ -58,10 +67,10 @@
    "write": 1
   }
  ],
- "search_fields": "consignee",
+ "search_fields": "consignee_name",
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "consignee",
+ "title_field": "consignee_name",
  "track_changes": 1
 }

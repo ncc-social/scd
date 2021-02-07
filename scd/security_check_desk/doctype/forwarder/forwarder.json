@@ -10,7 +10,7 @@
   "first_name",
   "middle_name",
   "last_name",
-  "full_name",
+  "forwarder_name",
   "image",
   "column_break_5",
   "date_of_birth",
@@ -55,16 +55,6 @@
    "fieldtype": "Data",
    "label": "Last Name",
    "reqd": 1
-  },
-  {
-   "bold": 1,
-   "fieldname": "full_name",
-   "fieldtype": "Data",
-   "in_global_search": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Full Name",
-   "read_only": 1
   },
   {
    "fieldname": "image",
@@ -173,12 +163,22 @@
    "fieldtype": "Table",
    "label": "Business Authorisation",
    "options": "Business Authorisation"
+  },
+  {
+   "bold": 1,
+   "fieldname": "forwarder_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Full Name",
+   "read_only": 1
   }
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-07 04:07:53.972142",
+ "modified": "2021-02-07 06:44:09.594559",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Forwarder",
@@ -197,10 +197,10 @@
    "write": 1
   }
  ],
- "search_fields": "full_name",
+ "search_fields": "forwarder_name",
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "full_name",
+ "title_field": "forwarder_name",
  "track_changes": 1
 }
