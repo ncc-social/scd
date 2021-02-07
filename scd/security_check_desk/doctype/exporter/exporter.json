@@ -153,7 +153,6 @@
    "label": "Fingerprint Impressions"
   },
   {
-   "bold": 1,
    "fieldname": "exporter_name",
    "fieldtype": "Data",
    "in_global_search": 1,
@@ -166,7 +165,7 @@
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-07 06:45:02.330135",
+ "modified": "2021-02-07 07:00:15.301333",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Exporter",
