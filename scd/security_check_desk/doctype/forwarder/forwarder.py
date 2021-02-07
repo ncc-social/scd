@@ -4,7 +4,6 @@
 
 from frappe.utils import getdate, validate_email_address, today, add_years, format_datetime, cstr
 from frappe import throw, _, scrub
-from frappe.utils.nestedset import NestedSet
 
 class Forwarder(Document):
     def validate(self):
