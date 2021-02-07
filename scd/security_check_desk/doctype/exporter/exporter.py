@@ -3,7 +3,7 @@
 # For license information, please see license.txt
 
 from __future__ import unicode_literals
-# import frappe
+import frappe
 from frappe.model.document import Document
 from frappe.utils import getdate, validate_email_address, today, add_years, format_datetime, cstr
 from frappe import throw, _, scrub
