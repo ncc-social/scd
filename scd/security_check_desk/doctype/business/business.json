@@ -1,13 +1,14 @@
 {
  "actions": [],
+ "autoname": "BIZ-.#####",
  "creation": "2021-02-06 15:23:05.938111",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "section_break_1",
-  "year",
   "business_name",
+  "address",
   "location",
   "landmark",
   "column_break_5",
@@ -21,14 +22,13 @@
  ],
  "fields": [
   {
-   "fieldname": "year",
-   "fieldtype": "Int",
-   "label": "Year"
-  },
-  {
    "fieldname": "business_name",
    "fieldtype": "Data",
-   "label": "Business Name"
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Business Name",
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "location",
@@ -47,6 +47,7 @@
   {
    "fieldname": "phone_number",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Phone Number"
   },
   {
@@ -80,11 +81,16 @@
   {
    "fieldname": "section_break_1",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-06 15:27:04.759808",
+ "modified": "2021-02-06 16:55:38.329421",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Business",
@@ -104,7 +110,9 @@
   }
  ],
  "quick_entry": 1,
+ "search_fields": "business_name",
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "business_name",
  "track_changes": 1
 }

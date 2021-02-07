@@ -1,7 +1,7 @@
 {
  "actions": [],
- "autoname": "EXP-.#####",
- "creation": "2021-02-03 13:37:35.484449",
+ "autoname": "FWD-.#####",
+ "creation": "2021-02-06 17:09:41.096931",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -36,9 +36,16 @@
   "attachments_section",
   "id",
   "column_break_30",
-  "fingerprint_impressions"
+  "fingerprint_impressions",
+  "section_break_32",
+  "business_info"
  ],
  "fields": [
+  {
+   "fieldname": "bio_data_section",
+   "fieldtype": "Section Break",
+   "label": "Bio Data"
+  },
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
@@ -67,81 +74,13 @@
    "read_only": 1
   },
   {
-   "fieldname": "postal_address",
-   "fieldtype": "Data",
-   "label": "Postal Address"
-  },
-  {
-   "fieldname": "phone_number",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Phone Number",
-   "options": "Phone"
-  },
-  {
-   "fieldname": "id_type",
-   "fieldtype": "Select",
-   "label": "ID Type",
-   "options": "--Select ID Type--\nNational ID\nPassport\nVoter ID\nDriver's Licence"
-  },
-  {
-   "fieldname": "id_number",
-   "fieldtype": "Data",
-   "label": "ID Number"
-  },
-  {
    "fieldname": "image",
    "fieldtype": "Attach Image",
    "label": "Picture"
   },
   {
-   "fieldname": "business_name",
-   "fieldtype": "Data",
-   "label": "Business Name"
-  },
-  {
-   "fieldname": "business_address",
-   "fieldtype": "Data",
-   "label": "Business Address"
-  },
-  {
-   "fieldname": "business_phone_number",
-   "fieldtype": "Data",
-   "label": "Business Phone Number",
-   "options": "Phone"
-  },
-  {
-   "fieldname": "attachments_section",
-   "fieldtype": "Section Break",
-   "label": "Attachments"
-  },
-  {
-   "fieldname": "bio_data_section",
-   "fieldtype": "Section Break",
-   "label": "Bio Data"
-  },
-  {
-   "fieldname": "column_break_7",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "business_details_section",
-   "fieldtype": "Section Break",
-   "label": "Business Details"
-  },
-  {
-   "fieldname": "column_break_16",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "column_break_5",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "business_email",
-   "fieldtype": "Data",
-   "label": "Business Email",
-   "options": "Email"
   },
   {
    "fieldname": "date_of_birth",
@@ -152,12 +91,6 @@
    "fieldname": "place_of_birth",
    "fieldtype": "Data",
    "label": "Place of Birth"
-  },
-  {
-   "fieldname": "personal_email",
-   "fieldtype": "Data",
-   "label": "Personal Email",
-   "options": "Email"
   },
   {
    "fieldname": "region_place_of_birth",
@@ -182,14 +115,83 @@
    "label": "Residential Address"
   },
   {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "popular_landmark",
    "fieldtype": "Data",
    "label": "Popular Landmark"
   },
   {
+   "fieldname": "postal_address",
+   "fieldtype": "Data",
+   "label": "Postal Address"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "personal_email",
+   "fieldtype": "Data",
+   "label": "Personal Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "id_type",
+   "fieldtype": "Select",
+   "label": "ID Type",
+   "options": "--Select ID Type--\nNational ID\nPassport\nVoter ID\nDriver's Licence"
+  },
+  {
+   "fieldname": "id_number",
+   "fieldtype": "Data",
+   "label": "ID Number"
+  },
+  {
+   "fieldname": "business_details_section",
+   "fieldtype": "Section Break",
+   "label": "Business Details"
+  },
+  {
    "fieldname": "occupation",
    "fieldtype": "Data",
    "label": "Occupation"
+  },
+  {
+   "fieldname": "business_name",
+   "fieldtype": "Data",
+   "label": "Business Name"
+  },
+  {
+   "fieldname": "business_address",
+   "fieldtype": "Data",
+   "label": "Business Address"
+  },
+  {
+   "fieldname": "business_phone_number",
+   "fieldtype": "Data",
+   "label": "Business Phone Number",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "business_email",
+   "fieldtype": "Data",
+   "label": "Business Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
   },
   {
    "fieldname": "id",
@@ -204,15 +206,25 @@
    "fieldname": "fingerprint_impressions",
    "fieldtype": "Attach Image",
    "label": "Fingerprint Impressions"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "business_info",
+   "fieldtype": "Table",
+   "label": "Business Info",
+   "options": "Business Authorisation"
   }
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-06 17:11:24.660450",
+ "modified": "2021-02-06 17:10:08.652013",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
- "name": "Exporter",
+ "name": "Forwarder",
  "owner": "Administrator",
  "permissions": [
   {
