@@ -26,13 +26,6 @@
   "personal_email",
   "id_type",
   "id_number",
-  "business_details_section",
-  "occupation",
-  "business_name",
-  "business_address",
-  "business_phone_number",
-  "column_break_16",
-  "business_email",
   "attachments_section",
   "id",
   "column_break_30",
@@ -153,42 +146,6 @@
    "label": "ID Number"
   },
   {
-   "fieldname": "business_details_section",
-   "fieldtype": "Section Break",
-   "label": "Business Details"
-  },
-  {
-   "fieldname": "occupation",
-   "fieldtype": "Data",
-   "label": "Occupation"
-  },
-  {
-   "fieldname": "business_name",
-   "fieldtype": "Data",
-   "label": "Business Name"
-  },
-  {
-   "fieldname": "business_address",
-   "fieldtype": "Data",
-   "label": "Business Address"
-  },
-  {
-   "fieldname": "business_phone_number",
-   "fieldtype": "Data",
-   "label": "Business Phone Number",
-   "options": "Phone"
-  },
-  {
-   "fieldname": "column_break_16",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "business_email",
-   "fieldtype": "Data",
-   "label": "Business Email",
-   "options": "Email"
-  },
-  {
    "fieldname": "attachments_section",
    "fieldtype": "Section Break",
    "label": "Attachments"
@@ -221,7 +178,7 @@
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-06 17:10:08.652013",
+ "modified": "2021-02-07 02:51:31.154765",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Forwarder",
