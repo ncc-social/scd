@@ -1,0 +1,13 @@
+{
+ "creation": "2021-02-08 13:32:16.980253",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2021-02-08 13:32:16.980253",
+ "modified_by": "Administrator",
+ "module": "Security Check Desk",
+ "name": "Exporter",
+ "owner": "Administrator",
+ "source_name": "Exporter",
+ "timeseries": 0
+}

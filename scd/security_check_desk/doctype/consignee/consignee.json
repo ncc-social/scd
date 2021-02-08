@@ -36,6 +36,7 @@
    "options": "Country"
   },
   {
+   "bold": 1,
    "fieldname": "consignee_name",
    "fieldtype": "Data",
    "in_global_search": 1,
@@ -47,7 +48,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-07 06:53:26.401119",
+ "modified": "2021-02-08 14:59:41.753614",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Consignee",

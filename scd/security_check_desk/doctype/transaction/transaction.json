@@ -68,15 +68,16 @@
    "read_only": 1
   },
   {
+   "depends_on": "eval:doc.forwarder_name",
    "fieldname": "company",
    "fieldtype": "Data",
-   "label": "Company",
-   "read_only": 1
+   "label": "Company"
   },
   {
    "fieldname": "company_name",
    "fieldtype": "Data",
-   "label": "Company Name"
+   "label": "Company Name",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_9",
@@ -91,13 +92,15 @@
   {
    "fieldname": "consignee_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Consignee Name",
    "read_only": 1
   },
   {
    "fieldname": "consignee_country",
    "fieldtype": "Data",
-   "label": "Consignee Country"
+   "label": "Consignee Country",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_13",
@@ -162,7 +165,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-07 06:45:56.354104",
+ "modified": "2021-02-08 15:15:26.563271",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Transaction",
@@ -182,6 +185,7 @@
   }
  ],
  "quick_entry": 1,
+ "search_fields": "exporter_name,forwarder_name",
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1
