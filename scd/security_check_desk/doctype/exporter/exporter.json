@@ -27,7 +27,7 @@
   "id_type",
   "id_number",
   "attachments_section",
-  "id",
+  "photo_id",
   "column_break_30",
   "fingerprint_impressions"
  ],
@@ -139,11 +139,6 @@
    "label": "Popular Landmark"
   },
   {
-   "fieldname": "id",
-   "fieldtype": "Attach Image",
-   "label": "ID"
-  },
-  {
    "fieldname": "column_break_30",
    "fieldtype": "Column Break"
   },
@@ -162,12 +157,17 @@
    "label": "Full Name",
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "photo_id",
+   "fieldtype": "Attach Image",
+   "label": "Photo ID"
   }
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-08 15:06:15.823523",
+ "modified": "2021-02-09 09:05:51.381813",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Exporter",

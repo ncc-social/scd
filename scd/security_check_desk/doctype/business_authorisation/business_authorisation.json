@@ -37,15 +37,16 @@
   {
    "fieldname": "business_name",
    "fieldtype": "Data",
+   "in_global_search": 1,
    "in_list_view": 1,
-   "label": "Business Name",
-   "read_only": 1
+   "in_standard_filter": 1,
+   "label": "Business Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-02-07 22:05:14.716993",
+ "modified": "2021-02-10 06:11:07.024892",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Business Authorisation",
