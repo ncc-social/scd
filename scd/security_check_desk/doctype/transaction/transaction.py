@@ -7,7 +7,7 @@ import frappe
 from frappe.model.document import Document
 
 class Transaction(Document):
-	# pass
+	pass
 	# @frappe.whitelist()
 	# def fetch_business(parent, year):
 	# 	record = frappe.db.sql("""
@@ -21,15 +21,3 @@ class Transaction(Document):
 	# 	}, as_dict=1)
 	# 	return record
 
-	@frappe.whitelist()
-	def fetch_business(doctype, txt, searchfield, start, page_lan, filters):
-		forwarder= filters.get('forwarder')
-		result = frappe.db.sql("""
-			SELECT distinct
-				a.business
-			FROM
-				`tabBusiness Authorisation` a
-			WHERE
-				a.parent = '{0}'
-			""".format(forwarder))
-		return result

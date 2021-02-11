@@ -18,7 +18,7 @@ frappe.ui.form.on('Transaction', {
 		frm.set_query("business", function(frm, cdt, cdn) {
 			var d = locals[cdt][cdn];
 			return {
-				query: 'scd.security_check_desk.doctype.transaction.transaction.fetch_business',
+				query: 'scd.security_check_desk.doctype.transaction.query.fetch_business',
 				filters: [
 					["Business Authorisation", "parent", "=", frm.forwarder],
 					["Business Authorisation", "year", ">", "2016"]
