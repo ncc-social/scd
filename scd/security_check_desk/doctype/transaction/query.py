@@ -3,14 +3,14 @@ import frappe
 from frappe.model.document import Document
 
 @frappe.whitelist()
-def fetch_business(doctype, txt, searchfield, start, page_lan, filters):
+def fetch_business:
 	# business = filters.get('business')
 	result = frappe.db.sql("""
 		SELECT
-			business_name
+			business
 		FROM
 			`tabBusiness Authorisation`
-		""")
+		WHERE parent = {0} AND year > {1}""")
 	return result
 
 
