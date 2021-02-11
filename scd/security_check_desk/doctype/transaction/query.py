@@ -7,12 +7,10 @@ def fetch_business(doctype, txt, searchfield, start, page_lan, filters):
 	# business = filters.get('business')
 	result = frappe.db.sql("""
 		SELECT
-			a.business_name
+			business_name
 		FROM
-			`tabBusiness Authorisation` a
-		WHERE
-			a.parent = '{0}'
-		""".format(forwarder))
+			`tabBusiness Authorisation`
+		""")
 	return result
 
 
