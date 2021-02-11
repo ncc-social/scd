@@ -19,7 +19,7 @@ from frappe.model.document import Document
 @frappe.whitelist()
 def fetch_business(doctype, txt, searchfield, start, page_len, filters):
 	cond = "1=1"
-	if filters.get('business'):
+	if filters.get('Buiness Authorisation'):
 		cond += " and business = '{}'".format(filters.get('business'))
 	# if filters.get('inspection_type'):
 	# 	cond += " and inspection_type = '{}'".format(filters.get('inspection_type'))
