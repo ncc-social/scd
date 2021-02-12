@@ -21,3 +21,8 @@ class Transaction(Document):
 	# 	}, as_dict=1)
 	# 	return record
 
+
+# @frappe.whitelist()
+#     def fetch_business(doctype, txt, searchfield, start, page_len, filters):
+#         business = frappe.db.sql("select name,business_name from `tabBusiness Authorisation`")
+#         return business

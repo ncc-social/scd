@@ -16,17 +16,23 @@
 frappe.ui.form.on('Transaction', {
 	refresh: function(frm) {
 		frm.set_query("business", function(frm, cdt, cdn) {
-			var d = locals[cdt][cdn];
+			var a = locals[cdt][cdn];
+			var d = new Date;
 			return {
 				query: 'scd.security_check_desk.doctype.transaction.query.fetch_business',
 				filters: [
 					["Business Authorisation", "parent", "=", frm.forwarder],
-					["Business Authorisation", "year", "=", "2016"]
+					["Business Authorisation", "year", "in", [
+						(d.getFullYear()-1).toString(), 
+						d.getFullYear().toString()
+						]
+					],
 				]
 			}
 		});
 	}
 });
+
 
 // Link formatter sample from Employee
 // frappe.form.link_formatters['Exporter'] = function(value, doc) {
@@ -63,6 +69,7 @@ frappe.ui.form.on('Transaction', {
 	refresh: function(frm) {
 		frm.add_fetch('exporter','exporter_name','exporter_name');
 		frm.add_fetch('exporter','phone_number','phone_number');
+		frm.add_fetch('exporter','exporter_photo','exporter_photo');
 		frm.add_fetch('forwarder','forwarder_name','forwarder_name');
 		frm.add_fetch('consignee','consignee_name','consignee_name');
 		frm.add_fetch('consignee','consignee_country','consignee_country');

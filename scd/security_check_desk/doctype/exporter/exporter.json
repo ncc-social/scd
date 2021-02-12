@@ -11,7 +11,7 @@
   "middle_name",
   "last_name",
   "exporter_name",
-  "image",
+  "exporter_photo",
   "column_break_5",
   "date_of_birth",
   "place_of_birth",
@@ -28,8 +28,10 @@
   "id_number",
   "attachments_section",
   "photo_id",
+  "view_photo_id",
   "column_break_30",
-  "fingerprint_impressions"
+  "fingerprint_impressions",
+  "view_fingerprint"
  ],
  "fields": [
   {
@@ -71,11 +73,6 @@
    "fieldname": "id_number",
    "fieldtype": "Data",
    "label": "ID Number"
-  },
-  {
-   "fieldname": "image",
-   "fieldtype": "Attach Image",
-   "label": "Picture"
   },
   {
    "fieldname": "attachments_section",
@@ -162,12 +159,27 @@
    "fieldname": "photo_id",
    "fieldtype": "Attach Image",
    "label": "Photo ID"
+  },
+  {
+   "fieldname": "view_photo_id",
+   "fieldtype": "HTML",
+   "label": "View Photo ID"
+  },
+  {
+   "fieldname": "view_fingerprint",
+   "fieldtype": "HTML",
+   "label": "View Fingerprint"
+  },
+  {
+   "fieldname": "exporter_photo",
+   "fieldtype": "Attach Image",
+   "label": "Picture"
   }
  ],
- "image_field": "image",
+ "image_field": "exporter_photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-09 09:05:51.381813",
+ "modified": "2021-02-12 10:02:50.662918",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Exporter",
