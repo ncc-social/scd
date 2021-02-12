@@ -19,7 +19,7 @@ frappe.ui.form.on('Transaction', {
 			var a = locals[cdt][cdn];
 			var d = new Date;
 			return {
-				query: 'scd.security_check_desk.doctype.transaction.query.fetch_business',
+				// query: 'scd.security_check_desk.doctype.transaction.query.fetch_business',
 				filters: [
 					["parent", "=", frm.forwarder],
 					["year", "in", [
