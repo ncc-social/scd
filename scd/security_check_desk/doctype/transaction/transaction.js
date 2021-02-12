@@ -15,7 +15,7 @@
 
 frappe.ui.form.on('Transaction', {
 	refresh: function(frm) {
-		frm.set_query("business", "business_name", function(frm, cdt, cdn) {
+		frm.set_query("business", function(frm, cdt, cdn) {
 			var a = locals[cdt][cdn];
 			var d = new Date;
 			return {
