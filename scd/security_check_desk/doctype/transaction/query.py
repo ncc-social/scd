@@ -24,7 +24,12 @@ from frappe.model.document import Document
 # 	return frappe.db.sql("""select business_name  from `tabBusiness Authorisation` 
 # 			where  {cond}""".format(cond=cond))
 
+# @frappe.whitelist()
+# def fetch_business(doctype, txt, searchfield, start, page_len, filters):
+# 	biz = frappe.db.sql("select business_name from `tabBusiness Authorisation`")
+# 	return biz
+
 @frappe.whitelist()
 def fetch_business(doctype, txt, searchfield, start, page_len, filters):
-	biz = frappe.db.sql("select business_name from `tabBusiness Authorisation`")
+	biz = frappe.db.sql("""select business_name from `tabBusiness Authorisation`""".format(code= filters.get("parent")))
 	return biz
