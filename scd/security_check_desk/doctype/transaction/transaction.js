@@ -21,7 +21,7 @@ frappe.ui.form.on('Transaction', {
 			return {
 				query: 'scd.security_check_desk.doctype.transaction.query.fetch_business',
 				filters: [
-					["Business Authorisation", "parent", "=", frm.forwarder],
+					["Business Authorisation", "parent", "=", a.forwarder],
 					["Business Authorisation", "year", "in", [
 						(d.getFullYear()-1).toString(), 
 						d.getFullYear().toString()
