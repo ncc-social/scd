@@ -22,16 +22,21 @@
   "section_break_13",
   "quantity",
   "weight",
+  "transaction_type",
   "column_break_17",
   "flight",
-  "cargo_description",
-  "column_break_19",
+  "courier_service",
+  "tracking_number",
   "airway_bill_number",
   "house_airway_bill_number",
+  "column_break_19",
+  "cargo_description",
   "section_break_20",
-  "export_declaration_form",
+  "edf",
+  "view_edf",
   "column_break_22",
-  "idg"
+  "idg",
+  "view_idg"
  ],
  "fields": [
   {
@@ -106,33 +111,33 @@
    "label": "Weight"
   },
   {
+   "depends_on": "eval:doc.transaction_type == \"Airline\"",
    "fieldname": "flight",
-   "fieldtype": "Data",
-   "label": "Flight"
+   "fieldtype": "Link",
+   "label": "Flight",
+   "options": "Flight"
   },
   {
+   "depends_on": "eval:doc.transaction_type == \"Airline\"",
    "fieldname": "airway_bill_number",
    "fieldtype": "Data",
    "label": "Airway Bill Number"
   },
   {
+   "depends_on": "eval:doc.transaction_type == \"Airline\"",
    "fieldname": "house_airway_bill_number",
    "fieldtype": "Data",
    "label": "House Airway Bill Number"
   },
   {
+   "depends_on": "eval:doc.transaction_type !== \"--Select--\"",
    "fieldname": "cargo_description",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Cargo Description"
   },
   {
    "fieldname": "section_break_20",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "export_declaration_form",
-   "fieldtype": "Attach Image",
-   "label": "Export Declaration Form"
   },
   {
    "fieldname": "column_break_22",
@@ -169,11 +174,46 @@
    "fieldtype": "Data",
    "label": "Phone Number",
    "read_only": 1
+  },
+  {
+   "default": "--Select--",
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "label": "Transaction Type",
+   "options": "--Select--\nAirline\nCourier"
+  },
+  {
+   "depends_on": "eval:doc.transaction_type == \"Courier\"",
+   "fieldname": "courier_service",
+   "fieldtype": "Link",
+   "label": "Courier Service",
+   "options": "Courier"
+  },
+  {
+   "depends_on": "eval:doc.transaction_type == \"Courier\"",
+   "fieldname": "tracking_number",
+   "fieldtype": "Data",
+   "label": "Tracking Number"
+  },
+  {
+   "fieldname": "view_edf",
+   "fieldtype": "HTML",
+   "label": "View EDF"
+  },
+  {
+   "fieldname": "view_idg",
+   "fieldtype": "HTML",
+   "label": "View IDG"
+  },
+  {
+   "fieldname": "edf",
+   "fieldtype": "Attach Image",
+   "label": "Export Declaration Form"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-12 10:45:02.598762",
+ "modified": "2021-02-12 22:20:00.472228",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Transaction",

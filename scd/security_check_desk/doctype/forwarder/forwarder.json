@@ -154,12 +154,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "business_authorisation",
-   "fieldtype": "Table",
-   "label": "Business Authorisation",
-   "options": "Business Authorisation"
-  },
-  {
    "bold": 1,
    "fieldname": "forwarder_name",
    "fieldtype": "Data",
@@ -174,12 +168,18 @@
    "fieldname": "forwarder_photo",
    "fieldtype": "Attach Image",
    "label": "Picture"
+  },
+  {
+   "fieldname": "business_authorisation",
+   "fieldtype": "Table",
+   "label": "Business Authorisation",
+   "options": "Business Authorisation"
   }
  ],
  "image_field": "forwarder_photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-12 10:03:24.734879",
+ "modified": "2021-02-12 21:12:50.942726",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Forwarder",

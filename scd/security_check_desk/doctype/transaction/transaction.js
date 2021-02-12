@@ -33,7 +33,20 @@ frappe.ui.form.on('Transaction', {
 	}
 });
 
-
+frappe.ui.form.on(cur_frm.doctype, {
+    refresh: frm => {
+        if (frm.doc.edf) {
+            frm.set_df_property("view_edf", "options", `
+                <object width="300" height="400" data="${ frm.doc.edf }"></object>
+            `);
+        }
+		if (frm.doc.idg) {
+            frm.set_df_property("view_idg", "options", `
+                <object width="300" height="400" data="${ frm.doc.idg }"></object>
+            `);
+        }
+    }
+});
 // Link formatter sample from Employee
 // frappe.form.link_formatters['Exporter'] = function(value, doc) {
 //     if(doc.exporter_name && doc.exporter_name !== value) {
