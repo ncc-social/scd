@@ -99,3 +99,12 @@ frappe.ui.form.on('Transaction', {
 // 		]
 // 	}
 // });
+
+
+frappe.form.link_formatters['Business Authorisation'] = function(value, doc) {
+	if(doc && doc.business && doc.business !== value) {
+		return value? value + ': ' + doc.business: doc.business;
+	} else {
+		return value;
+	}
+}

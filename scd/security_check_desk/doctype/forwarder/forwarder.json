@@ -148,7 +148,8 @@
   },
   {
    "fieldname": "section_break_25",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Authorisations"
   },
   {
    "bold": 1,
@@ -191,7 +192,7 @@
  "image_field": "forwarder_photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-13 08:04:59.920653",
+ "modified": "2021-02-14 07:55:09.311378",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Forwarder",
