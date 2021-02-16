@@ -48,13 +48,13 @@ frappe.ui.form.on(cur_frm.doctype, {
     }
 });
 // Link formatter sample from Employee
-// frappe.form.link_formatters['Exporter'] = function(value, doc) {
-//     if(doc.exporter_name && doc.exporter_name !== value) {
-//         return value + ':/ ' + doc.exporter_name;
-//     } else {
-//         return value;
-//     }
-// }
+frappe.form.link_formatters['Business Authorisation'] = function(value, doc) {
+    if(doc.business_name && doc.business_name !== value) {
+        return value + ':/ ' + doc.business_name;
+    } else {
+        return value;
+    }
+}
 
 // frappe.ui.form.on("Transaction", "refresh", function(frm) {
 // 	cur_frm.fields_dict['Business'].grid.get_field('business_name').get_query = function(doc, cdt, cdn) {
@@ -67,14 +67,14 @@ frappe.ui.form.on(cur_frm.doctype, {
 // 	}
 // });
 
-frappe.ui.form.on('Transaction', {
-	refresh: function(frm) {
-		var df = frappe.meta.get_docfield("Business Authorisation", "business", frm.doc.name);
-		df.formatter = function(value, df, options, doc) {
-			return value ? value + ': ' + doc.business_name: doc.business_name;
-		}
-	}
-})
+// frappe.ui.form.on('Transaction', {
+// 	refresh: function(frm) {
+// 		var df = frappe.meta.get_docfield("Business Authorisation", "business", frm.doc.name);
+// 		df.formatter = function(value, df, options, doc) {
+// 			return value ? value + ': ' + doc.business_name: doc.business_name;
+// 		}
+// 	}
+// })
 
 // cur_frm.fields_dict.business.get_query = function(doc) {
 // 	return {
