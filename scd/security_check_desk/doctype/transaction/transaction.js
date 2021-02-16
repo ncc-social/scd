@@ -67,7 +67,14 @@ frappe.ui.form.on(cur_frm.doctype, {
 // 	}
 // });
 
-
+frappe.ui.form.on('Transaction', {
+	refresh: function(frm) {
+		var df = frappe.meta.get_docfield("Business Authorisation", "business", frm.doc.name);
+		df.formatter = function(value, df, options, doc) {
+			return value ? value + ': ' + doc.business_name: doc.business_name;
+		}
+	}
+})
 
 // cur_frm.fields_dict.business.get_query = function(doc) {
 // 	return {
