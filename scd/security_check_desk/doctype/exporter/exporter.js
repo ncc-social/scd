@@ -32,7 +32,7 @@ frappe.ui.form.on(cur_frm.doctype, {
 
 	create_forwarder: function(frm){
 		frappe.call({
-			method: "create_forwarder",
+			method: "scd.security_check_desk.doctype.exporter.exporter.create_forwarder",
 			args:{
 				docname: frm.doc.name
 			},
