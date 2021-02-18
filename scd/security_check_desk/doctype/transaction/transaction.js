@@ -49,7 +49,7 @@ frappe.ui.form.on(cur_frm.doctype, {
 });
 // Link formatter sample from Employee
 frappe.form.link_formatters['Business Authorisation'] = function(value, doc) {
-    if(doc.business && doc.business !== value) {
+    if(doc.business_name && doc.business_name !== value) {
         return value + ':/ ' + doc.business_name;
     } else {
         return value;
