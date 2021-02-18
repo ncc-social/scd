@@ -22,7 +22,7 @@ frappe.ui.form.on(cur_frm.doctype, {
         }
     },
     refresh: function(frm) {
-		if(frm.doc.docstatus == 1) {
+		if(frm.doc.docstatus == 0) {
 			frm.add_custom_button(__('As Forwarder'), function() {
 				frm.events.create_forwarder(frm);
 			}, __('Create'));
