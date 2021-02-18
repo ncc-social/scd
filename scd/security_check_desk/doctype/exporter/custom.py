@@ -31,5 +31,4 @@ def create_forwarder(docname):
 	new_forwarder.id_number = exporter_info.id_number
 	new_forwarder.photo_id = exporter_info.photo_id
 	new_forwarder.fingerprint_impressions = exporter_info.fingerprint_impressions
-
     return new_forwarder.as_dict()
