@@ -17,6 +17,7 @@ def create_forwarder(docname):
     new_forwarder.middle_name = exporter_info.middle_name
     new_forwarder.last_name = exporter_info.last_name
     new_forwarder.forwarder_photo = exporter_info.exporter_photo
+    new_forwarder.exporter_record = exporter_info.name
     new_forwarder.date_of_birth = exporter_info.date_of_birth
     new_forwarder.place_of_birth = exporter_info.place_of_birth
     new_forwarder.region_place_of_birth = exporter_info.region_place_of_birth
