@@ -9,7 +9,7 @@ from frappe import throw, _, scrub
 def create_forwarder(docname):
     forwarder_exist = frappe.db.exists("Forwarder", {"exporter_record": docname})
     if forwarder_exist:
-        frappe.throw(_("Exporter {0} already exists as a Forwarder").format(exporter))
+        frappe.throw(_("Exporter {0} already exists as a Forwarder").format(forwarder_exist))
 
     exporter_info = frappe.get_doc("Exporter", docname)
     new_forwarder = frappe.new_doc("Forwarder")
