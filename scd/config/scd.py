@@ -5,7 +5,7 @@ def get_data():
 	return [
 		{
 			"label": _("Security Check Desk"),
-			"icon": "octicon octicon-book",
+			"icon": "octicon octicon-briefcase",
 			"items": [
 				{
 					"type": "doctype",

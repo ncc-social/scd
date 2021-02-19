@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "autoname": "format:{awb}-{YYYY}",
  "creation": "2021-02-19 12:09:51.906972",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -20,7 +21,7 @@
   "origin",
   "destination",
   "arrival_date",
-  "tagged",
+  "status",
   "column_break_16",
   "reason_for_tagging"
  ],
@@ -43,7 +44,7 @@
   {
    "fieldname": "awb",
    "fieldtype": "Data",
-   "label": "AWB"
+   "label": "Airway Bill Number"
   },
   {
    "fieldname": "pieces",
@@ -59,11 +60,13 @@
   {
    "fieldname": "origin",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Origin"
   },
   {
    "fieldname": "destination",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Destination"
   },
   {
@@ -72,13 +75,7 @@
    "label": "Arrival Date"
   },
   {
-   "fieldname": "tagged",
-   "fieldtype": "Select",
-   "label": "Tagged?",
-   "options": "No\nYes"
-  },
-  {
-   "depends_on": "eval:doc.tagged == \"Yes\"",
+   "depends_on": "eval:doc.status == \"Tagged\"",
    "fieldname": "reason_for_tagging",
    "fieldtype": "Small Text",
    "label": "Reason for Tagging"
@@ -111,11 +108,18 @@
   {
    "fieldname": "column_break_16",
    "fieldtype": "Column Break"
+  },
+  {
+   "default": "--Select--",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "--Select--\nUntagged\nTagged"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-19 13:00:49.699605",
+ "modified": "2021-02-19 14:08:03.161179",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Cargo Import",
@@ -136,5 +140,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "awb",
  "track_changes": 1
 }

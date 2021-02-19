@@ -11,7 +11,7 @@ def get_data():
 			"label": _("Security Check Desk"),
 			"color": "#589494",
 			"reverse": 1,
-			"icon": "octicon octicon-book",
+			"icon": "octicon octicon-briefcase",
 			"type": "module",
 			"description": "Managing Security Check Desk"
 		},
