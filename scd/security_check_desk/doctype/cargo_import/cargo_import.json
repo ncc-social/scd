@@ -42,6 +42,7 @@
    "label": "Point of Loading"
   },
   {
+   "columns": 4,
    "fieldname": "awb",
    "fieldtype": "Data",
    "label": "Airway Bill Number"
@@ -58,12 +59,14 @@
    "precision": "2"
   },
   {
+   "columns": 2,
    "fieldname": "origin",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Origin"
   },
   {
+   "columns": 2,
    "fieldname": "destination",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -110,6 +113,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "columns": 2,
    "default": "--Select--",
    "fieldname": "status",
    "fieldtype": "Select",
@@ -119,7 +123,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-19 14:08:03.161179",
+ "modified": "2021-02-19 15:51:32.895747",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Cargo Import",
@@ -138,6 +142,7 @@
    "write": 1
   }
  ],
+ "search_fields": "awb,origin",
  "sort_field": "modified",
  "sort_order": "DESC",
  "title_field": "awb",

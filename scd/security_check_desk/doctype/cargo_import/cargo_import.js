@@ -6,3 +6,5 @@ frappe.ui.form.on('Cargo Import', {
 
 	// }
 });
+
+cur_frm.toggle_display('name',false);
