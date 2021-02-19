@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "creation": "2021-02-19 12:09:51.906972",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "flight_no",
+  "column_break_3",
+  "flight_date",
+  "column_break_5",
+  "point_of_loading",
+  "section_break_7",
+  "awb",
+  "pieces",
+  "weight",
+  "description",
+  "column_break_12",
+  "origin",
+  "destination",
+  "arrival_date",
+  "tagged",
+  "column_break_16",
+  "reason_for_tagging"
+ ],
+ "fields": [
+  {
+   "fieldname": "flight_no",
+   "fieldtype": "Data",
+   "label": "Flight No"
+  },
+  {
+   "fieldname": "flight_date",
+   "fieldtype": "Date",
+   "label": "Flight Date"
+  },
+  {
+   "fieldname": "point_of_loading",
+   "fieldtype": "Data",
+   "label": "Point of Loading"
+  },
+  {
+   "fieldname": "awb",
+   "fieldtype": "Data",
+   "label": "AWB"
+  },
+  {
+   "fieldname": "pieces",
+   "fieldtype": "Data",
+   "label": "Pieces"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight",
+   "precision": "2"
+  },
+  {
+   "fieldname": "origin",
+   "fieldtype": "Data",
+   "label": "Origin"
+  },
+  {
+   "fieldname": "destination",
+   "fieldtype": "Data",
+   "label": "Destination"
+  },
+  {
+   "fieldname": "arrival_date",
+   "fieldtype": "Date",
+   "label": "Arrival Date"
+  },
+  {
+   "fieldname": "tagged",
+   "fieldtype": "Select",
+   "label": "Tagged?",
+   "options": "No\nYes"
+  },
+  {
+   "depends_on": "eval:doc.tagged == \"Yes\"",
+   "fieldname": "reason_for_tagging",
+   "fieldtype": "Small Text",
+   "label": "Reason for Tagging"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description/Nature of Goods"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-02-19 13:00:49.699605",
+ "modified_by": "Administrator",
+ "module": "Security Check Desk",
+ "name": "Cargo Import",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
