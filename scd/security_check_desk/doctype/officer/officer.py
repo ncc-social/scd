@@ -11,7 +11,4 @@ from frappe import throw, _, scrub
 
 class Officer(Document):
 	def validate(self):
-		self.set_officer_name()
-
-	def set_officer_name(self):
 		self.officer_name = ' '.join(filter(lambda x: x, [self.first_name, self.middle_name, self.last_name]))
