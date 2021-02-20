@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "creation": "2021-02-20 14:36:21.487053",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "import",
+  "awb",
+  "pieces",
+  "weight",
+  "description",
+  "flight_no",
+  "flight_date",
+  "arrival_date",
+  "importer",
+  "forwarder",
+  "consignee",
+  "examination_officer",
+  "examination_date",
+  "location",
+  "examination_remarks",
+  "oic",
+  "oic_remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "import",
+   "fieldtype": "Link",
+   "label": "Import",
+   "options": "Cargo Import"
+  },
+  {
+   "fieldname": "awb",
+   "fieldtype": "Data",
+   "label": "AWB"
+  },
+  {
+   "fieldname": "pieces",
+   "fieldtype": "Data",
+   "label": "Pieces"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "flight_no",
+   "fieldtype": "Data",
+   "label": "Flight No"
+  },
+  {
+   "fieldname": "flight_date",
+   "fieldtype": "Data",
+   "label": "Flight Date"
+  },
+  {
+   "fieldname": "arrival_date",
+   "fieldtype": "Date",
+   "label": "Arrival Date"
+  },
+  {
+   "fieldname": "importer",
+   "fieldtype": "Data",
+   "label": "Importer"
+  },
+  {
+   "fieldname": "forwarder",
+   "fieldtype": "Data",
+   "label": "Forwarder"
+  },
+  {
+   "fieldname": "consignee",
+   "fieldtype": "Data",
+   "label": "Consignee"
+  },
+  {
+   "fieldname": "examination_officer",
+   "fieldtype": "Data",
+   "label": "Examination Officer"
+  },
+  {
+   "fieldname": "examination_date",
+   "fieldtype": "Date",
+   "label": "Examination Date"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "oic",
+   "fieldtype": "Data",
+   "label": "OIC"
+  },
+  {
+   "fieldname": "oic_remarks",
+   "fieldtype": "Small Text",
+   "label": "OIC Remarks"
+  },
+  {
+   "fieldname": "examination_remarks",
+   "fieldtype": "Small Text",
+   "label": "Examination Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-02-20 15:31:43.913289",
+ "modified_by": "Administrator",
+ "module": "Security Check Desk",
+ "name": "Examination",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
