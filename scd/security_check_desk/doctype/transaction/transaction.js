@@ -16,17 +16,17 @@
 frappe.ui.form.on('Transaction', {
 	refresh: function(frm) {
 		frm.set_query("business", function(frm, cdt, cdn) {
-			var a = locals[cdt][cdn];
+			// var a = locals[cdt][cdn];
 			var d = new Date;
 			return {
-				query: 'scd.security_check_desk.doctype.transaction.query.fetch_business',
+				// query: 'scd.security_check_desk.doctype.transaction.query.fetch_business',
 				filters: [
-					["parent", "=", frm.forwarder]
-					// ["year", "in", [
-					// 	(d.getFullYear()-1).toString(), 
-					// 	d.getFullYear().toString()
-					// 	]
-					// ],
+					["parent", "=", frm.forwarder],
+					["year", "in", [
+						(d.getFullYear()-1).toString(), 
+						d.getFullYear().toString()
+						]
+					],
 				]
 			}
 		});
