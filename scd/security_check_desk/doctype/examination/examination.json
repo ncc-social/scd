@@ -15,13 +15,15 @@
   "arrival_date",
   "importer",
   "forwarder",
+  "forwarder_name",
   "consignee",
-  "examination_officer_id",
+  "officer",
   "officer_name",
   "examination_date",
   "location",
   "examination_remarks",
   "oic",
+  "oic_name",
   "oic_remarks"
  ],
  "fields": [
@@ -73,8 +75,9 @@
   },
   {
    "fieldname": "forwarder",
-   "fieldtype": "Data",
-   "label": "Forwarder"
+   "fieldtype": "Link",
+   "label": "Forwarder",
+   "options": "Forwarder"
   },
   {
    "fieldname": "consignee",
@@ -93,8 +96,9 @@
   },
   {
    "fieldname": "oic",
-   "fieldtype": "Data",
-   "label": "OIC"
+   "fieldtype": "Link",
+   "label": "OIC",
+   "options": "Officer"
   },
   {
    "fieldname": "oic_remarks",
@@ -107,21 +111,33 @@
    "label": "Examination Remarks"
   },
   {
-   "fieldname": "examination_officer_id",
+   "fieldname": "officer_name",
+   "fieldtype": "Data",
+   "label": "Examination Officer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "officer",
    "fieldtype": "Link",
    "label": "Examination Officer ID",
    "options": "Officer"
   },
   {
-   "fieldname": "officer_name",
+   "fieldname": "forwarder_name",
    "fieldtype": "Data",
-   "label": "Examination Officer",
+   "label": "Forwarder Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "oic_name",
+   "fieldtype": "Data",
+   "label": "OIC Name",
    "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-20 21:14:04.501681",
+ "modified": "2021-02-20 21:53:05.043999",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Examination",
