@@ -11,4 +11,4 @@ from frappe import throw, _, scrub
 
 class Supervisor(Document):
 	def validate(self):
-		self.officer_name = ' '.join(filter(lambda x: x, [self.first_name, self.middle_name, self.last_name]))
+		self.supervisor_name = ' '.join(filter(lambda x: x, [self.first_name, self.middle_name, self.last_name]))
