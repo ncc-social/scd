@@ -14,7 +14,7 @@ frappe.ui.form.on("Officer", {
 		frappe.call({
 			method: "scd.security_check_desk.doctype.officer.custom.create_user",
 			args: {
-                docname: frm.doc.name 
+                 officer: frm.doc.name, email: frm.doc.officer_email
             },
 			callback: function(r){
                 var doc = frappe.model.sync(r.message);
