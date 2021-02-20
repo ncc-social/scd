@@ -37,5 +37,5 @@ def fetch_business(doctype, txt, searchfield, start, page_len, filters):
 
 # @frappe.whitelist()
 # def fetch_business(parent,year):
-# 	return frappe.db.sql("""select business_name from `tabBusiness Authorisation` where parent=%s and year=%s""",(parent,year),as_dict=1)
+# 	return frappe.db.sql("""select business_name from `tabBusiness Authorisation` where parent=%s""", (filters.get("parent")))
 # 	# return [x.business_name for x in biz]
