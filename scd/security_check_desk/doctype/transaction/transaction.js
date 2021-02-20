@@ -45,6 +45,11 @@ frappe.ui.form.on(cur_frm.doctype, {
                 <object width="300" height="400" data="${ frm.doc.idg }"></object>
             `);
         }
+		if (frm.doc.exporter_photo) {
+            frm.set_df_property("view_exporter_photo", "options", `
+                <object width="300" height="400" data="${ frm.doc.exporter_photo }"></object>
+            `);
+        }
     }
 });
 // Link formatter sample from Employee
