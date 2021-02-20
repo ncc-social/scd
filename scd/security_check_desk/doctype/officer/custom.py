@@ -13,20 +13,7 @@ def create_user(officer, email):
         frappe.throw(_("Officer already has User credentials"))
     # Load current Officer details into variable "off"
     off = frappe.get_doc("Officer", officer)
-	# officer_name = off.officer_name.split(" ")
-	# middle_name = last_name = ""
-
-	# if len(officer_name) >= 3:
-	# 	last_name = " ".join(officer_name[2:])
-	# 	middle_name = officer_name[1]
-	# elif len(officer_name) == 2:
-	# 	last_name = officer_name[1]
-
-	# first_name = officer_name[0]
-
-    # if email:
-	# 	off.officer_email = email
-
+	
     # Create a new User
     user = frappe.new_doc("User")
     # Fill the User doc with details fetched from Officer doc
