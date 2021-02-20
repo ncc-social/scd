@@ -3,7 +3,7 @@
 
 frappe.ui.form.on('Examination', {
 	refresh: function(frm) {
-		frm.set_query("examination_officer", function(frm, cdt, cdn) {
+		frm.set_query("examination_officer_id", function(frm, cdt, cdn) {
 			// var a = locals[cdt][cdn];
 			var d = new Date;
 			return {
