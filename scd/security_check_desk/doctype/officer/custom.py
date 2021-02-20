@@ -8,12 +8,12 @@ from frappe.model.document import Document
 @frappe.whitelist()
 # Define the function to send Officer details to User doc
 def create_user(officer, email):
+    off = frappe.get_doc("Officer", officer)
     user_exist = frappe.db.exists("User", {"email": email})
     if user_exist:
-        frappe.throw(_("Officer already has User credentials"))
+        frappe.throw(_("Officer {0} already has User credentials").format(off.officer_name))
     # Load current Officer details into variable "off"
-    off = frappe.get_doc("Officer", officer)
-	
+    
     # Create a new User
     user = frappe.new_doc("User")
     # Fill the User doc with details fetched from Officer doc
