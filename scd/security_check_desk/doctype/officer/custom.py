@@ -38,4 +38,4 @@ def create_user(docname):
     user.user_image = off.officer_photo
     user.send_welcome_email = 0
     # Details should be sent to officer.js file
-    return user.as_dict()
+    return user
