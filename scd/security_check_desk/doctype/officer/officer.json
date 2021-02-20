@@ -68,6 +68,7 @@
   {
    "fieldname": "gender",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Gender",
    "options": "Female\nMale"
   },
@@ -85,7 +86,7 @@
  "image_field": "officer_photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-20 17:31:07.204639",
+ "modified": "2021-02-20 17:38:17.746648",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Officer",
