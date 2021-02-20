@@ -8,6 +8,9 @@ frappe.ui.form.on("Officer", {
                 frm.events.create_user(frm);
             }, __('Create'));
             frm.page.set_inner_btn_group_as_primary(__('Create'));
+            // cur_frm.add_custom_button(__("Create User Access"), function() {
+            //     frm.events.create_user(frm);
+            // });
         }
     },
 	create_user: function(frm) {
