@@ -12,6 +12,7 @@
   "officer_name",
   "officer_photo",
   "column_break_6",
+  "gender",
   "officer_email",
   "status",
   "phone_number"
@@ -56,6 +57,7 @@
    "in_global_search": 1,
    "in_list_view": 1,
    "label": "Full Name",
+   "read_only": 1,
    "search_index": 1
   },
   {
@@ -69,13 +71,19 @@
    "label": "Email",
    "options": "Email",
    "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Female\nMale"
   }
  ],
  "icon": "fa fa-user",
  "image_field": "officer_photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-20 15:47:13.207319",
+ "modified": "2021-02-20 17:01:56.639173",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Officer",
