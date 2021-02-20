@@ -3,7 +3,7 @@
 
 frappe.ui.form.on("Officer", {
 	refresh: function(frm) {
-        if(frm.doc.docstatus == 0) {
+        if(frm.doc.docstatus = 0) {
             frm.add_custom_button(__('As User'), function() {
                 frm.events.create_user(frm);
             }, __('Create'));
