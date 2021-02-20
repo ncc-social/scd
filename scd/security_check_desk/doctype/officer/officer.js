@@ -1,7 +1,7 @@
 // Copyright (c) 2021, NCC and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Officer', {
+frappe.ui.form.on("Officer", {
 	refresh: function(frm) {
         if(frm.doc.docstatus == 0) {
             frm.add_custom_button(__('As User'), function() {
@@ -11,10 +11,6 @@ frappe.ui.form.on('Officer', {
         }
     },
 	create_user: function(frm) {
-		if (!frm.doc.officer_email)
-		{
-			frappe.throw(__("Please enter Email"))
-		}
 		frappe.call({
 			method: "scd.security_check_desk.doctype.officer.custom.create_user",
 			args: { officer: frm.doc.name, email: frm.doc.officer_email },
