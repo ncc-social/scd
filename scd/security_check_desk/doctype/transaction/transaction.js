@@ -19,7 +19,7 @@ frappe.ui.form.on('Transaction', {
 			var a = locals[cdt][cdn];
 			var d = new Date;
 			return {
-				//query: 'scd.security_check_desk.doctype.transaction.query.fetch_business',
+				query: 'scd.security_check_desk.doctype.transaction.query.fetch_business',
 				filters: [
 					["parent", "=", frm.forwarder],
 					["year", "in", [
@@ -43,11 +43,6 @@ frappe.ui.form.on(cur_frm.doctype, {
 		if (frm.doc.idg) {
             frm.set_df_property("view_idg", "options", `
                 <object width="300" height="400" data="${ frm.doc.idg }"></object>
-            `);
-        }
-		if (frm.doc.exporter_photo) {
-            frm.set_df_property("view_exporter_photo", "options", `
-                <object width="300" height="400" data="${ frm.doc.exporter_photo }"></object>
             `);
         }
     }

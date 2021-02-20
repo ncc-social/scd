@@ -29,7 +29,13 @@ from frappe.model.document import Document
 # 	biz = frappe.db.sql("select business_name from `tabBusiness Authorisation`")
 # 	return biz
 
+# @frappe.whitelist()
+# def fetch_business(doctype, txt, searchfield, start, page_len, filters):
+# 	biz = frappe.db.sql("""select business_name from `tabBusiness Authorisation`""")
+# 	return biz
+
+
 @frappe.whitelist()
-def fetch_business(doctype, txt, searchfield, start, page_len, filters):
-	biz = frappe.db.sql("""select business_name from `tabBusiness Authorisation`""")
-	return biz
+def fetch_business(parent,year):
+	biz = frappe.db.sql("""select business_name from `tabBusiness Authorisation` where parent=%s and year=%s""",(parent,year),as_dict=1)
+	return [x.business_name for x in biz]

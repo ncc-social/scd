@@ -10,14 +10,11 @@
   "exporter",
   "exporter_name",
   "phone_number",
-  "exporter_photo",
-  "view_exporter_photo",
   "column_break_4",
   "forwarder",
   "forwarder_name",
   "business",
   "business_name",
-  "view_forwarder_photo",
   "column_break_9",
   "consignee",
   "consignee_name",
@@ -221,26 +218,11 @@
    "fieldname": "date_of_transaction",
    "fieldtype": "Date",
    "label": "Date of Transaction"
-  },
-  {
-   "fieldname": "view_exporter_photo",
-   "fieldtype": "HTML",
-   "label": "View Exporter Photo"
-  },
-  {
-   "fieldname": "view_forwarder_photo",
-   "fieldtype": "HTML",
-   "label": "View Forwarder Photo"
-  },
-  {
-   "fieldname": "exporter_photo",
-   "fieldtype": "Attach Image",
-   "label": "Exporter Photo"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-20 10:38:36.874491",
+ "modified": "2021-02-20 10:46:57.792323",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Transaction",
