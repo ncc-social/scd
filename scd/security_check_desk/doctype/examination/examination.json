@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "autoname": "EXAM-.######",
  "creation": "2021-02-20 14:36:21.487053",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -10,21 +11,23 @@
   "pieces",
   "weight",
   "description",
-  "flight_no",
+  "flight_number",
   "flight_date",
   "arrival_date",
   "importer",
   "forwarder",
   "forwarder_name",
   "consignee",
+  "consignee_name",
   "officer",
   "officer_name",
   "examination_date",
   "location",
   "examination_remarks",
-  "oic",
-  "oic_name",
-  "oic_remarks"
+  "supervisor",
+  "supervisor_name",
+  "supervisor_remarks",
+  "attachments"
  ],
  "fields": [
   {
@@ -36,37 +39,38 @@
   {
    "fieldname": "awb",
    "fieldtype": "Data",
-   "label": "AWB"
+   "label": "AWB",
+   "read_only": 1
   },
   {
    "fieldname": "pieces",
    "fieldtype": "Data",
-   "label": "Pieces"
+   "label": "Pieces",
+   "read_only": 1
   },
   {
    "fieldname": "weight",
    "fieldtype": "Data",
-   "label": "Weight"
+   "label": "Weight",
+   "read_only": 1
   },
   {
    "fieldname": "description",
    "fieldtype": "Data",
-   "label": "Description"
-  },
-  {
-   "fieldname": "flight_no",
-   "fieldtype": "Data",
-   "label": "Flight No"
+   "label": "Description/Nature of Goods",
+   "read_only": 1
   },
   {
    "fieldname": "flight_date",
    "fieldtype": "Data",
-   "label": "Flight Date"
+   "label": "Flight Date",
+   "read_only": 1
   },
   {
    "fieldname": "arrival_date",
    "fieldtype": "Date",
-   "label": "Arrival Date"
+   "label": "Arrival Date",
+   "read_only": 1
   },
   {
    "fieldname": "importer",
@@ -81,8 +85,9 @@
   },
   {
    "fieldname": "consignee",
-   "fieldtype": "Data",
-   "label": "Consignee"
+   "fieldtype": "Link",
+   "label": "Consignee",
+   "options": "Consignee"
   },
   {
    "fieldname": "examination_date",
@@ -93,17 +98,6 @@
    "fieldname": "location",
    "fieldtype": "Data",
    "label": "Location"
-  },
-  {
-   "fieldname": "oic",
-   "fieldtype": "Link",
-   "label": "OIC",
-   "options": "Officer"
-  },
-  {
-   "fieldname": "oic_remarks",
-   "fieldtype": "Small Text",
-   "label": "OIC Remarks"
   },
   {
    "fieldname": "examination_remarks",
@@ -129,15 +123,44 @@
    "read_only": 1
   },
   {
-   "fieldname": "oic_name",
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Supervisor"
+  },
+  {
+   "fieldname": "supervisor_name",
    "fieldtype": "Data",
-   "label": "OIC Name",
+   "label": "Supervisor Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "supervisor_remarks",
+   "fieldtype": "Small Text",
+   "label": "Supervisor Remarks"
+  },
+  {
+   "fieldname": "consignee_name",
+   "fieldtype": "Data",
+   "label": "Consignee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Examination Attachment"
+  },
+  {
+   "fieldname": "flight_number",
+   "fieldtype": "Data",
+   "label": "Flight Number",
    "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-20 21:53:05.043999",
+ "modified": "2021-02-20 23:51:22.094332",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Examination",
