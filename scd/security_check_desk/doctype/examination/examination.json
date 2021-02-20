@@ -16,7 +16,8 @@
   "importer",
   "forwarder",
   "consignee",
-  "examination_officer",
+  "examination_officer_id",
+  "officer_name",
   "examination_date",
   "location",
   "examination_remarks",
@@ -81,11 +82,6 @@
    "label": "Consignee"
   },
   {
-   "fieldname": "examination_officer",
-   "fieldtype": "Data",
-   "label": "Examination Officer"
-  },
-  {
    "fieldname": "examination_date",
    "fieldtype": "Date",
    "label": "Examination Date"
@@ -109,11 +105,23 @@
    "fieldname": "examination_remarks",
    "fieldtype": "Small Text",
    "label": "Examination Remarks"
+  },
+  {
+   "fieldname": "examination_officer_id",
+   "fieldtype": "Link",
+   "label": "Examination Officer ID",
+   "options": "Officer"
+  },
+  {
+   "fieldname": "officer_name",
+   "fieldtype": "Data",
+   "label": "Examination Officer",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-20 15:31:43.913289",
+ "modified": "2021-02-20 21:14:04.501681",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Examination",
