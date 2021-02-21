@@ -20,7 +20,6 @@ frappe.ui.form.on('Examination', {
 
 frappe.ui.form.on('Examination', {
 	refresh: function(frm) {
-		
 		frm.add_fetch('Cargo Import','flight_number','flight_number');
 		frm.add_fetch('Cargo Import','flight_date','flight_date');
 		frm.add_fetch('Cargo Import','awb','awb');
