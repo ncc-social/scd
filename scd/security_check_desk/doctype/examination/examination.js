@@ -24,6 +24,7 @@ frappe.ui.form.on('Examination', {
 		frm.add_fetch('cargo_import','flight_date','flight_date');
 		frm.add_fetch('cargo_import','awb','awb');
 		frm.add_fetch('cargo_import','weight','weight');
+		frm.add_fetch('cargo_import','pieces','pieces');
 		frm.add_fetch('cargo_import','description','description');
 		frm.add_fetch('cargo_import','arrival_date','arrival_date');
 		frm.add_fetch('cargo_import','description','description');

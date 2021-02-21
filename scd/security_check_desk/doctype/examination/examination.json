@@ -6,34 +6,45 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "section_break_1",
   "cargo_import",
   "awb",
   "pieces",
+  "column_break_5",
   "weight",
   "description",
   "flight_number",
+  "column_break_9",
   "flight_date",
   "arrival_date",
+  "section_break_12",
   "importer",
+  "column_break_14",
   "forwarder",
   "forwarder_name",
+  "column_break_17",
   "consignee",
   "consignee_name",
+  "section_break_20",
   "officer",
   "officer_name",
   "examination_date",
+  "column_break_24",
   "location",
   "examination_remarks",
+  "section_break_27",
   "supervisor",
   "supervisor_name",
+  "column_break_29",
   "supervisor_remarks",
+  "section_break_33",
   "attachments"
  ],
  "fields": [
   {
    "fieldname": "awb",
    "fieldtype": "Data",
-   "label": "AWB",
+   "label": "AWB Number",
    "read_only": 1
   },
   {
@@ -56,7 +67,7 @@
   },
   {
    "fieldname": "flight_date",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Flight Date",
    "read_only": 1
   },
@@ -120,18 +131,21 @@
    "fieldname": "supervisor",
    "fieldtype": "Link",
    "label": "Supervisor",
-   "options": "Supervisor"
+   "options": "Supervisor",
+   "permlevel": 1
   },
   {
    "fieldname": "supervisor_name",
    "fieldtype": "Data",
    "label": "Supervisor Name",
+   "permlevel": 1,
    "read_only": 1
   },
   {
    "fieldname": "supervisor_remarks",
    "fieldtype": "Small Text",
-   "label": "Supervisor Remarks"
+   "label": "Supervisor Remarks",
+   "permlevel": 1
   },
   {
    "fieldname": "consignee_name",
@@ -156,11 +170,55 @@
    "fieldtype": "Link",
    "label": "Cargo Import",
    "options": "Cargo Import"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_33",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-21 07:00:31.788782",
+ "modified": "2021-02-21 17:52:22.312642",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Examination",
