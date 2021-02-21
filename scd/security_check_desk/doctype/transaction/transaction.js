@@ -77,7 +77,7 @@ frappe.form.link_formatters['Business Authorisation'] = function(value, doc) {
 // })
 
 frappe.ui.form.on("Transaction", "validate", function(frm) {
-    var awbreg = "/^[0-9]{3}[-][0-9]{8}$/";
+    var awbreg = /^[0-9]{3}[-][0-9]{8}$/;
     if (awbreg.test(frm.doc.awb) === true){
         frappe.msgprint(__("Airway Bill Number is invalid."));
         frappe.validated = false;
