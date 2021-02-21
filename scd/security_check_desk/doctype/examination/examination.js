@@ -20,12 +20,12 @@ frappe.ui.form.on('Examination', {
 
 frappe.ui.form.on('Examination', {
 	refresh: function(frm) {
-		frm.add_fetch('Cargo Import','flight_number','flight_number');
-		frm.add_fetch('Cargo Import','flight_date','flight_date');
-		frm.add_fetch('Cargo Import','awb','awb');
-		frm.add_fetch('Cargo Import','weight','weight');
-		frm.add_fetch('Cargo Import','description','description');
-		frm.add_fetch('Cargo Import','arrival_date','arrival_date');
+		frm.add_fetch('cargo import','flight_number','flight_number');
+		frm.add_fetch('cargo import','flight_date','flight_date');
+		frm.add_fetch('cargo import','awb','awb');
+		frm.add_fetch('cargo import','weight','weight');
+		frm.add_fetch('cargo import','description','description');
+		frm.add_fetch('cargo import','arrival_date','arrival_date');
 		frm.add_fetch('officer','officer_name','officer_name');
 		frm.add_fetch('supervisor','supervisor_name','supervisor_name');
 		frm.add_fetch('forwarder','forwarder_name','forwarder_name');

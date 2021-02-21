@@ -8,11 +8,10 @@ from frappe.model.document import Document
 @frappe.whitelist()
 # Define the function to send supervisor details to User doc
 def create_user(supervisor, email):
-    sup = frappe.get_doc("supervisor", supervisor)
+    # Load current supervisor details into variable "sup"sup = frappe.get_doc("supervisor", supervisor)
     user_exist = frappe.db.exists("User", {"email": email})
     if user_exist:
         frappe.throw(_("Supervisor {0} already has User credentials").format(sup.supervisor_name))
-    # Load current supervisor details into variable "sup"
     
     # Create a new User
     user = frappe.new_doc("User")
