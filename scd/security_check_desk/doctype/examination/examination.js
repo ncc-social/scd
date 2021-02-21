@@ -5,6 +5,17 @@ frappe.ui.form.on('Examination', {
 	
 });
 
+frappe.ui.form.on('Examination', {
+	refresh: function(frm) {
+		frm.set_query("import", function(frm, cdt, cdn) {
+			return {
+				filters: [
+					["status", "=", "Tagged"]
+				]
+			}
+		});
+	}
+});
 
 
 frappe.ui.form.on('Examination', {

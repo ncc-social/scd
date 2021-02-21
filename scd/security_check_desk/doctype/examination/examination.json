@@ -6,7 +6,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "import",
+  "cargo_import",
   "awb",
   "pieces",
   "weight",
@@ -30,12 +30,6 @@
   "attachments"
  ],
  "fields": [
-  {
-   "fieldname": "import",
-   "fieldtype": "Link",
-   "label": "Import",
-   "options": "Cargo Import"
-  },
   {
    "fieldname": "awb",
    "fieldtype": "Data",
@@ -107,13 +101,13 @@
   {
    "fieldname": "officer_name",
    "fieldtype": "Data",
-   "label": "Examination Officer",
+   "label": "Examination Officer Name",
    "read_only": 1
   },
   {
    "fieldname": "officer",
    "fieldtype": "Link",
-   "label": "Examination Officer ID",
+   "label": "Examination Officer",
    "options": "Officer"
   },
   {
@@ -156,11 +150,17 @@
    "fieldtype": "Data",
    "label": "Flight Number",
    "read_only": 1
+  },
+  {
+   "fieldname": "cargo_import",
+   "fieldtype": "Link",
+   "label": "Cargo Import",
+   "options": "Cargo Import"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-02-20 23:51:22.094332",
+ "modified": "2021-02-21 00:11:48.576713",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "Examination",
@@ -179,7 +179,9 @@
    "write": 1
   }
  ],
+ "search_fields": "awb",
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "awb",
  "track_changes": 1
 }
