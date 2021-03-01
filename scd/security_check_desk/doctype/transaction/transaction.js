@@ -76,6 +76,14 @@ frappe.form.link_formatters['Business Authorisation'] = function(value, doc) {
 // 	}
 // })
 
+frappe.form.link_formatters['Business Authorisation'] = function(value, doc) {
+	if(doc && doc.business_name && doc.business_name !== value) {
+		return value + ': ' + doc.business;
+	} else {
+		return value;
+	}
+}
+
 frappe.ui.form.on("Transaction", "validate", function(frm) {
     var awbreg = /^[0-9]{3}[-][0-9]{8}$/;
     if (awbreg.test(frm.doc.awb) === true){
