@@ -83,12 +83,12 @@ def get_conditions(filters) :
 	conditions = []
 
 	if filters.get("exporter_name"):
-		conditions.append(" and and exporter_name LIKE %(exporter_name)s")
+		conditions.append(" and exporter_name LIKE %(exporter_name)s")
     
 	if filters.get("forwarder_name"):
-		conditions.append(" and and exporter_name LIKE %(forwarder_name)s")
+		conditions.append(" and exporter_name LIKE %(forwarder_name)s")
 	
 	if filters.get("consignee_name"):
-		conditions.append(" and and exporter_name LIKE %(consignee_name)s")
+		conditions.append(" and exporter_name LIKE %(consignee_name)s")
 
 	return " ".join(conditions) if conditions else ""
