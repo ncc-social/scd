@@ -52,7 +52,8 @@ def get_columns():
 			"fieldname":"weight",
 			"label": _("Weight"),
 			"fieldtype": "Float",
-			"width": 100
+			"width": 100,
+			"precision": 2
 		},
 		{
 			"label": _("Cargo Description"),
