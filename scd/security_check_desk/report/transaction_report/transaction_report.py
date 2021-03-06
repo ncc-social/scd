@@ -20,9 +20,9 @@ def get_columns():
         _("Exporter") + ":Data:150",
         _("Forwarder") + ":Data:150",
         _("Consignee") + ":Data:150",
-        _("Quantity") + ":Data:200",
-        _("Weight")+ ":Date:100",
-		_("Cargo Description") + ":Link/Branch:120",
+        _("Quantity") + ":Int:50",
+        _("Weight")+ ":Float:50",
+		_("Cargo Description") + ":Data:200",
         _("Country") + ":Link/Country:120"
 	]
 
