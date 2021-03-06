@@ -16,14 +16,14 @@ def execute(filters=None):
 
 def get_columns():
 	return [
-		_("Transaction Date") + ":Date:120",
-        _("Exporter") + ":Data:150",
-        _("Forwarder") + ":Data:150",
-        _("Consignee") + ":Data:150",
-        _("Quantity") + ":Int:50",
-        _("Weight")+ ":Float:50",
-		_("Cargo Description") + ":Data:200",
-        _("Country") + ":Link/Country:120"
+		_("Transaction Date") + ":Date:50",
+        _("Exporter") + ":Data:200",
+        _("Forwarder") + ":Data:200",
+        _("Consignee") + ":Data:200",
+        _("Quantity") + ":Data:30",
+        _("Weight")+ ":Float:30",
+		_("Cargo Description") + ":Date:200",
+        _("Country") + ":Link/Country:60"
 	]
 
     # columns = [
@@ -50,14 +50,14 @@ def get_transactions(filters):
 
 def get_conditions(filters):
 	conditions = ""
-	if filters.get("exporter_name"):
-		conditions += " and exporter_name = '%s'"
+	if filters.get("exporter"):
+		conditions += " and exporter = '%s'"
 	
-	if filters.get("forwarder_name"):
-		conditions += " and forwarder_name = '%s'"
+	if filters.get("forwarder"):
+		conditions += " and forwarder = '%s'"
 
-	if filters.get("consignee_name"):
-		conditions += " and consignee_name = '%s'"
+	if filters.get("consignee"):
+		conditions += " and consignee = '%s'"
 	
 	# if filters.get("month"):
 	# 	month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov",
