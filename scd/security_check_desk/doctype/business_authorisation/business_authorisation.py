@@ -8,6 +8,6 @@ from frappe.model.naming import make_autoname
 
 class BusinessAuthorisation(Document):
 	def autoname(self):
-		self.name = self.business_name + '. (.###.)'
+		self.name = self.business_name + "(" + "hash" + ")"
 
 
