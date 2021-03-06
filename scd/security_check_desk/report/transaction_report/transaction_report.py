@@ -23,7 +23,7 @@ def get_columns():
         _("Quantity") + ":Data:100",
         _("Weight")+ ":Float:100",
 		_("Cargo Description") + ":Date:200",
-        _("Country") + ":Link/Country:100"
+        _("Country") + ":Data:100"
 	]
 
     # columns = [
