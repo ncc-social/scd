@@ -16,7 +16,7 @@ def get_columns():
 			"fieldname": "name",
 			"fieldtype": "Link",
 			"options": "Transaction"
-			"width": 100,
+			"width": 100
 		},
 		{
 			"label": _("Transaction Date"),
