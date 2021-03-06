@@ -68,7 +68,7 @@ def get_data(filters):
 		SELECT
 			date_of_transaction,
 			exporter_name,
-			`forwarder_name,
+			forwarder_name,
 			consignee_name,
 			quantity,
 			weight,
