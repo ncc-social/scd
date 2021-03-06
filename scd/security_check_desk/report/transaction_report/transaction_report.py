@@ -87,8 +87,8 @@ def get_conditions(filters) :
     
 	if filters.get("forwarder_name"):
 		conditions.append(" and and exporter_name LIKE %(forwarder_name)s")
-
-    if filters.get("consignee_name"):
+	
+	if filters.get("consignee_name"):
 		conditions.append(" and and exporter_name LIKE %(consignee_name)s")
 
 	return " ".join(conditions) if conditions else ""
