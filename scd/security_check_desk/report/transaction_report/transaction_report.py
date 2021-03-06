@@ -12,6 +12,13 @@ def execute(filters=None):
 def get_columns():
 	columns = [
 		{
+			"label": _("Transaction"),
+			"fieldname": "name",
+			"fieldtype": "Link",
+			"options": "Transaction"
+			"width": 100,
+		},
+		{
 			"label": _("Transaction Date"),
 			"fieldname": "date_of_transaction",
 			"fieldtype": "Date",
@@ -66,6 +73,7 @@ def get_columns():
 def get_data(filters):
 	return frappe.db.sql("""
 		SELECT
+			name,
 			date_of_transaction,
 			exporter_name,
 			forwarder_name,
@@ -77,13 +85,13 @@ def get_data(filters):
 		FROM
 			tabTransaction 
 		WHERE
-			1 = 1 {conditions}""".format(conditions=get_conditions(filters)), filters)
+			1 = 1 {conditions}""".format(conditions=get_conditions(filters)), filters, as_dict=1)
 
 def get_conditions(filters) :
 	conditions = []
 
 	if filters.get("exporter_name"):
-		conditions.append(" and exporter_name LIKE %%(exporter_name)s%")
+		conditions.append(" and exporter_name LIKE %(exporter_name)s")
     
 	if filters.get("forwarder_name"):
 		conditions.append(" and exporter_name LIKE %(forwarder_name)s")
