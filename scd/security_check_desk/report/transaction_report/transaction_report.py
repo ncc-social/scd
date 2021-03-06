@@ -75,7 +75,7 @@ def get_data(filters):
 			cargo_description,
 			consignee_country
 		FROM
-			tabTransaction
+			tabTransaction 
 		WHERE
 			1 = 1 {conditions}""".format(conditions=get_conditions(filters)), filters, as_dict=1)
 
