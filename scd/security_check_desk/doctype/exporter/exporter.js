@@ -25,8 +25,7 @@ frappe.ui.form.on(cur_frm.doctype, {
 
 
 frappe.ui.form.on("Exporter", {
-    onload: function(frm) {
-        //frm.disable_("Create");
+    refresh: function(frm) {
         if(frm.doc.docstatus == 0) {
             frm.add_custom_button(__('As Forwarder'), function() {
                 frm.events.create_forwarder(frm);
