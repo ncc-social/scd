@@ -8,7 +8,7 @@ from frappe.model.naming import make_autoname
 
 class BusinessAuthorisation(Document):
 	def autoname(self):
-		prefix = re.sub('-+', '-', self.business_name.replace(' ', '-'))
-		self.name = make_autoname(prefix + '-.###')
+		prefix = re.sub('-+', '-', self.business_name.replace(' ', '_'))
+		self.name = make_autoname(prefix + '_.###')
 
 
