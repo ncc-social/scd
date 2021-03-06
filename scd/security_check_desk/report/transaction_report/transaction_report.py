@@ -46,7 +46,7 @@ def get_transactions(filters):
 	conditions = get_conditions(filters)
 	return frappe.db.sql("""select date_of_transaction, exporter_name, forwarder_name, consignee_name,
 	quantity, weight, cargo_description,
-	consignee_country from tabTransaction where 1 = 1 %s""" % conditions, as_list=1)
+	consignee_country from tabTransaction where 1 = 1 %s""" % conditions, filters)
 
 def get_conditions(filters):
 	conditions = ""
