@@ -15,7 +15,7 @@ def get_columns():
 			"label": _("Transaction"),
 			"fieldname": "name",
 			"fieldtype": "Link",
-			"options": "Transaction"
+			"options": "Transaction",
 			"width": 100
 		},
 		{
@@ -91,7 +91,7 @@ def get_conditions(filters) :
 	conditions = []
 
 	if filters.get("exporter_name"):
-		conditions.append(" and exporter_name LIKE %(exporter_name)s").format(filters.get("exporter_name"))
+		conditions.append(" and exporter_name LIKE %(exporter_name)s")
     
 	if filters.get("forwarder_name"):
 		conditions.append(" and exporter_name LIKE %(forwarder_name)s")
