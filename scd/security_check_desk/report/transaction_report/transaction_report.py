@@ -50,14 +50,14 @@ def get_transactions(filters):
 
 def get_conditions(filters):
 	conditions = ""
-	if filters.get("exporter"):
-		conditions += " and exporter = '%s'"
+	if filters.get("exporter_name"):
+		conditions += " and exporter_name LIKE '%%s%%'"
 	
-	if filters.get("forwarder"):
-		conditions += " and forwarder = '%s'"
+	if filters.get("forwarder_name"):
+		conditions += " and forwarder_name LIKE '%%s%%'"
 
-	if filters.get("consignee"):
-		conditions += " and consignee = '%s'"
+	if filters.get("consignee_name"):
+		conditions += " and consignee_name LIKE '%%s%%'"
 	
 	# if filters.get("month"):
 	# 	month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov",
