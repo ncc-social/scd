@@ -31,7 +31,7 @@ from frappe.model.document import Document
 
 @frappe.whitelist()
 def fetch_business(doctype, txt, searchfield, start, page_len, filters):
-	biz = frappe.db.sql("""select business_name from `tabBusiness Authorisation`""")
+	biz = frappe.db.sql("""select name, business_name from `tabBusiness Authorisation`""")
 	return biz
 
 
