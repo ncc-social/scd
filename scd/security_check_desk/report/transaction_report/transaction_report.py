@@ -16,14 +16,14 @@ def execute(filters=None):
 
 def get_columns():
 	return [
-		_("Transaction Date") + ":Date:50",
+		_("Transaction Date") + ":Date:100",
         _("Exporter") + ":Data:200",
         _("Forwarder") + ":Data:200",
         _("Consignee") + ":Data:200",
-        _("Quantity") + ":Data:30",
-        _("Weight")+ ":Float:30",
+        _("Quantity") + ":Data:100",
+        _("Weight")+ ":Float:100",
 		_("Cargo Description") + ":Date:200",
-        _("Country") + ":Link/Country:60"
+        _("Country") + ":Link/Country:100"
 	]
 
     # columns = [
