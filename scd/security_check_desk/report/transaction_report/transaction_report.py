@@ -77,7 +77,7 @@ def get_data(filters):
 		FROM
 			tabTransaction 
 		WHERE
-			1 = 1 {conditions}""".format(conditions=get_conditions(filters)), filters, as_dict=1)
+			1 = 1 {conditions}""".format(conditions=get_conditions(filters)), filters)
 
 def get_conditions(filters) :
 	conditions = []
