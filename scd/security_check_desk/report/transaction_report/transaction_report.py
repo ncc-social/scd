@@ -94,7 +94,7 @@ def get_data(filters):
 
 	return data
 
-def get_conditions(filters) :
+def get_conditions(filters):
 	# conditions = []
 
 	# if filters.get("exporter_name"):
