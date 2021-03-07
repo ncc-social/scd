@@ -10,7 +10,7 @@ def execute(filters=None):
 	
 
 	data = get_data(conditions, filters)
-	return columns, data, conditions
+	return columns, data
 
 def get_columns(filters):
 	columns = [
