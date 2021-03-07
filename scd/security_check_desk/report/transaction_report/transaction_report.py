@@ -74,7 +74,7 @@ def get_columns(filters):
 	]
 	return columns
 
-def get_data(filters):
+def get_data(conditions, filters):
 	data = frappe.db.sql("""
 		SELECT
 			name,
