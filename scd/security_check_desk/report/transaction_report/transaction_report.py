@@ -6,6 +6,8 @@ from frappe import _
 import frappe
 
 def execute(filters=None):
+	if not filters: filters = {}
+	
 	columns = get_columns(filters)
 	data = get_data(filters)
 	return columns, data
