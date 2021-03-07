@@ -89,7 +89,6 @@ def get_data(filters):
 			tabTransaction 
 		WHERE
 			1 = 1 {0}""".format(conditions), filters, as_dict=1)
-
 	return data
 
 def get_conditions(filters):
