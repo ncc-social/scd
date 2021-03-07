@@ -7,7 +7,7 @@ import frappe
 
 def execute(filters=None):
 	columns = get_columns(filters)
-	conditions = get_conditions(filters)
+	
 
 	data = get_data(conditions, filters)
 	return columns, data, conditions
@@ -75,6 +75,7 @@ def get_columns(filters):
 	return columns
 
 def get_data(conditions, filters):
+	conditions = get_conditions(filters)
 	data = frappe.db.sql("""
 		SELECT
 			name,
