@@ -109,7 +109,7 @@ def get_conditions(filters) :
 
 	conditions = ""
 	if filters.get("exporter_name"):
-		conditions += " and exporter_name LIKE %(exporter_name)s%"
+		conditions += " and exporter_name = %(exporter_name)s%"
 
 	if filters.get("forwarder_name"):
 		conditions += " and exporter_name LIKE %(forwarder_name)s%"
