@@ -6,10 +6,13 @@ from frappe import _
 import frappe
 
 def execute(filters=None):
-	columns, data = get_columns(), get_data(filters)
+	columns = get_columns(filters)
+	conditions = get_conditions(filters)
+
+	data = get_data(conditions,filters)
 	return columns, data
 
-def get_columns():
+def get_columns(filters):
 	columns = [
 		{
 			"label": _("Transaction"),
@@ -72,7 +75,7 @@ def get_columns():
 	return columns
 
 def get_data(filters):
-	return frappe.db.sql("""
+	data = frappe.db.sql("""
 		SELECT
 			name,
 			date_of_transaction,
@@ -86,18 +89,32 @@ def get_data(filters):
 		FROM
 			tabTransaction 
 		WHERE
-			1 = 1 {conditions}""".format(conditions=get_conditions(filters)), filters, as_dict=1)
+			1 = 1 {0}""".format(conditions), filters, as_dict=1)
+
+	return data
 
 def get_conditions(filters) :
-	conditions = []
+	# conditions = []
 
-	if filters.get("exporter_name"):
-		conditions.append(" and exporter_name LIKE %(exporter_name)s")
+	# if filters.get("exporter_name"):
+	# 	conditions.append(" and exporter_name LIKE %(exporter_name)s")
     
-	if filters.get("forwarder_name"):
-		conditions.append(" and exporter_name LIKE %(forwarder_name)s")
+	# if filters.get("forwarder_name"):
+	# 	conditions.append(" and exporter_name LIKE %(forwarder_name)s")
 	
-	if filters.get("consignee_name"):
-		conditions.append(" and exporter_name LIKE %(consignee_name)s")
+	# if filters.get("consignee_name"):
+	# 	conditions.append(" and exporter_name LIKE %(consignee_name)s")
 
-	return " ".join(conditions) if conditions else ""
+	# return " ".join(conditions) if conditions else ""
+
+	conditions = ""
+	if filters.get("exporter_name"):
+		conditions += " and exporter_name LIKE %(exporter_name)s%"
+
+	if filters.get("forwarder_name"):
+		conditions += " and exporter_name LIKE %(forwarder_name)s%"
+
+	if filters.get("consignee_name"):
+		conditions += " and exporter_name LIKE %(consignee_name)s"
+
+	return conditions
