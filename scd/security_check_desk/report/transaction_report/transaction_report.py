@@ -9,7 +9,7 @@ def execute(filters=None):
 	columns = get_columns(filters)
 	
 
-	data = get_data(conditions, filters)
+	data = get_data(filters)
 	return columns, data
 
 def get_columns(filters):
@@ -74,7 +74,7 @@ def get_columns(filters):
 	]
 	return columns
 
-def get_data(conditions, filters):
+def get_data(filters):
 	conditions = get_conditions(filters)
 	data = frappe.db.sql("""
 		SELECT
