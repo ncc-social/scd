@@ -128,15 +128,23 @@ from frappe import _
 from frappe.utils import flt
 
 def execute(filters=None):
-	if not filters: filters = {}
+	if filters.to_date < filters.from_date:
+		frappe.throw(_('"Date From" can not be greater than "Date To"'))
 
 	columns = get_columns()
-	data = get_transactions(filters)
+	data = get_data(filters)
 
 	return columns, data
 
+	# if not filters: filters = {}
+
+	# columns = get_columns()
+	# data = get_transactions(filters)
+
+	# return columns, data
+
 def get_columns():
-	return [
+	columns = [
 		_("Transaction Date") + ":Date:100",
         _("Exporter") + ":Data:200",
         _("Forwarder") + ":Data:200",
@@ -146,6 +154,8 @@ def get_columns():
 		_("Cargo Description") + ":Data:200",
         _("Country") + ":Data:100"
 	]
+
+	return columns
 
     # columns = [
     #     _("Transaction") + “:date:90”,
@@ -163,23 +173,35 @@ def get_columns():
     #     ]
     # return columns
 
-def get_transactions(filters):
+def get_data(filters):
 	conditions = get_conditions(filters)
-	return frappe.db.sql("""select name, date_of_transaction, exporter_name, forwarder_name, consignee_name,
-	quantity, weight, cargo_description,
-	consignee_country from tabTransaction where 1 = 1 %s""" % conditions, as_list=1)
+
+	records = frappe.db.sql("""select name, date_of_transaction, exporter_name, forwarder_name, 
+	consignee_name, quantity, weight, cargo_description, consignee_country 
+	from tabTransaction where date_of_transaction <= %(from_date)s AND date_of_transaction => %(to_date)s
+	""", {
+		"from_date": from_date,
+		"to_date": to_date
+	}, as_dict=1)
+	
+	return records
+
+	
+	# return frappe.db.sql("""select name, date_of_transaction, exporter_name, forwarder_name, consignee_name,
+	# quantity, weight, cargo_description,
+	# consignee_country from tabTransaction where 1 = 1 %s""" % conditions, as_list=1)
 
 
 def get_conditions(filters):
-	conditions = ""
-	if filters.get("exporter_name"):
-		conditions += " and exporter_name LIKE '%%s%%'" % filters["exporter_name"]
+	# conditions = ""
+	# if filters.get("exporter_name"):
+	# 	conditions += " and exporter_name LIKE '%%s%%'" % filters["exporter_name"]
 	
-	if filters.get("forwarder_name"):
-		conditions += " and forwarder_name LIKE '%%s%%'" % filters["forwarder_name"]
+	# if filters.get("forwarder_name"):
+	# 	conditions += " and forwarder_name LIKE '%%s%%'" % filters["forwarder_name"]
 
-	if filters.get("consignee_name"):
-		conditions += " and consignee_name LIKE '%%s%%'" % filters["consignee_name"]
+	# if filters.get("consignee_name"):
+	# 	conditions += " and consignee_name LIKE '%%s%%'" % filters["consignee_name"]
 	
 # def get_conditions(filters) :
 # 	conditions = []
@@ -199,5 +221,9 @@ def get_conditions(filters):
 
 	# if filters.get("company"): conditions += " and company = '%s'" % \
 	# 	filters["company"].replace("'", "\\'")
-
+	conditions = []
+	if filters.get('from_date'):
+		conditions['from_date'] = filters.get('from_date')
+	if filters.get('to_date'):
+		conditions['to_date'] = filters.get('to_date')
 	return conditions
