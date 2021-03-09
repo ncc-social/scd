@@ -177,7 +177,8 @@ def get_columns():
 def get_data(filters):
 	conditions = get_conditions(filters)
 
-	records = frappe.db.sql("""select name, date_of_transaction, exporter_name, forwarder_name, 
+	data = []
+	data = frappe.db.sql("""select name, date_of_transaction, exporter_name, forwarder_name, 
 	consignee_name, quantity, weight, cargo_description, consignee_country 
 	from tabTransaction where date_of_transaction <= %(from_date)s AND date_of_transaction => %(to_date)s
 	""", {
@@ -185,7 +186,7 @@ def get_data(filters):
 		"to_date": to_date
 	}, as_dict=1)
 	
-	return records
+	return data
 
 	
 	# return frappe.db.sql("""select name, date_of_transaction, exporter_name, forwarder_name, consignee_name,
@@ -222,7 +223,7 @@ def get_conditions(filters):
 
 	# if filters.get("company"): conditions += " and company = '%s'" % \
 	# 	filters["company"].replace("'", "\\'")
-	conditions = ""
+	conditions = []
 	if filters.get('from_date'):
 		conditions['from_date'] = filters.get('from_date')
 	if filters.get('to_date'):
