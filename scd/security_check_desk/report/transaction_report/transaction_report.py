@@ -128,6 +128,7 @@ from frappe import _
 from frappe.utils import flt
 
 def execute(filters=None):
+	
 	if filters.to_date < filters.from_date:
 		frappe.throw(_('"Date From" can not be greater than "Date To"'))
 
@@ -221,7 +222,7 @@ def get_conditions(filters):
 
 	# if filters.get("company"): conditions += " and company = '%s'" % \
 	# 	filters["company"].replace("'", "\\'")
-	conditions = []
+	conditions = ""
 	if filters.get('from_date'):
 		conditions['from_date'] = filters.get('from_date')
 	if filters.get('to_date'):
