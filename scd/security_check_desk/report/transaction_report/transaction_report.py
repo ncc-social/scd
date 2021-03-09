@@ -128,7 +128,7 @@ from frappe import _
 from frappe.utils import flt
 
 def execute(filters=None):
-	
+	filters = frappe._dict(filters or {})
 	if filters.to_date < filters.from_date:
 		frappe.throw(_('"Date From" can not be greater than "Date To"'))
 
