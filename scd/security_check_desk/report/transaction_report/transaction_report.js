@@ -5,22 +5,19 @@
 frappe.query_reports["Transaction"] = {
 	"filters": [
 		{
-			"fieldname":"exporter",
+			"fieldname":"exporter_name",
 			"label": __("Exporter"),
-			"fieldtype": "Link",
-			"options": "Exporter"
+			"fieldtype": "Data"
 		},
         {
-			"fieldname":"forwarder",
+			"fieldname":"forwarder_name",
 			"label": __("Forwarder"),
-			"fieldtype": "Link",
-			"options": "Forwarder"
+			"fieldtype": "Data"
 		},
         {
-			"fieldname":"consignee",
+			"fieldname":"consignee_name",
 			"label": __("Consignee"),
-			"fieldtype": "Link",
-			"options": "Consignee"
+			"fieldtype": "Data"
 		}
 	]
-}
+};

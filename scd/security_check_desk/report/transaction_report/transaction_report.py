@@ -23,6 +23,7 @@ def execute(filters=None):
 
 def get_columns():
 	return [
+		_("ID") + ":Data:80",
 		_("Transaction Date") + ":Date:100",
         _("Exporter") + ":Data:200",
         _("Forwarder") + ":Data:200",
