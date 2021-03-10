@@ -75,7 +75,7 @@ def get_columns():
 		},
 		{
 			"label": _("Country"),
-			"fieldname": "country",
+			"fieldname": "consignee_country",
 			"fieldtype": "Data",
 			"width": 100
 		}
