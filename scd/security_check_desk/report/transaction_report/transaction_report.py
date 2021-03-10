@@ -22,18 +22,78 @@ def execute(filters=None):
 	return columns, data
 
 def get_columns():
-	return [
-		_("ID") + ":Data:80",
-		_("Transaction Date") + ":Date:100",
-        _("Exporter") + ":Data:200",
-        _("Forwarder") + ":Data:200",
-        _("Consignee") + ":Data:200",
-        _("Quantity") + ":Data:80",
-        _("Weight")+ ":Float:100",
-		_("Cargo Description") + ":Data:200",
-        _("Country") + ":Data:100"
+	columns = [
+		{
+			"label": _("ID"),
+			"fieldname": "name",
+			"fieldtype": "Link",
+			"options": "Transaction",
+			"width": 100,
+		},
+		{
+			"label": _("Transaction Date"),
+			"fieldname": "date_of_transaction",
+			"fieldtype": "Date",
+			"width": 100,
+		},
+		{
+			"label": _("Exporter"),
+			"fieldname": "exporter_name",
+			"fieldtype": "Data",
+			"width": 180
+		},
+        {
+			"label": _("Forwarder"),
+			"fieldname": "forwarder_name",
+			"fieldtype": "Data",
+			"width": 180
+		},
+        {
+			"label": _("Consignee"),
+			"fieldname": "consignee_name",
+			"fieldtype": "Data",
+			"width": 180
+		},
+		{
+			"fieldname":"quantity",
+			"label": _("Quantity"),
+			"fieldtype": "Int",
+			"width": 80
+		},
+		{
+			"fieldname":"weight",
+			"label": _("Weight"),
+			"fieldtype": "Float",
+			"width": 100,
+			"precision": 2
+		},
+		{
+			"label": _("Cargo Description"),
+			"fieldname": "cargo_description",
+			"fieldtype": "Data",
+			"width": 200
+		},
+		{
+			"label": _("Country"),
+			"fieldname": "country",
+			"fieldtype": "Data",
+			"width": 100
+		}
 	]
-
+	
+	return columns
+	# return [
+	# 	_("ID") + ":Data:80",
+	# 	_("Transaction Date") + ":Date:100",
+    #     _("Exporter") + ":Data:200",
+    #     _("Forwarder") + ":Data:200",
+    #     _("Consignee") + ":Data:200",
+    #     _("Quantity") + ":Data:80",
+    #     _("Weight")+ ":Float:100",
+	# 	_("Cargo Description") + ":Data:200",
+    #     _("Country") + ":Data:100"
+	# ]
+	
     # columns = [
     #     _("Transaction") + “:date:90”,
     #     _(“Remarks”) + “::200”,
