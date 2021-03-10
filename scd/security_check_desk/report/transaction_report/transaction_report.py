@@ -122,13 +122,12 @@ def get_conditions(filters):
 	if filters.get("exporter"):
 		# conditions += " and exporter_name LIKE '%%s%%'" % filters["exporter_name"]
 		conditions += " and exporter = %(exporter)s"
-	
-	if filters.get("forwarder_name"):
-		conditions += " and forwarder_name LIKE '%%s%%'" % filters["forwarder_name"]
-
-	if filters.get("consignee_name"):
-		conditions += " and consignee_name LIKE '%%s%%'" % filters["consignee_name"]
-	
+	if filters.get("forwarder"):
+		# conditions += " and forwarder_name LIKE '%%s%%'" % filters["forwarder_name"]
+		conditions += " and forwarder = %(forwarder)s"
+	if filters.get("consignee"):
+		# conditions += " and consignee_name LIKE '%%s%%'" % filters["consignee_name"]
+		conditions += " and consignee = %(consignee)s"
 # def get_conditions(filters) :
 # 	conditions = []
 
