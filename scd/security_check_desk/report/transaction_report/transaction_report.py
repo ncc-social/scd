@@ -54,13 +54,14 @@ def get_transactions(filters):
 	conditions = get_conditions(filters)
 	return frappe.db.sql("""select name, date_of_transaction, exporter_name, forwarder_name, consignee_name,
 	quantity, weight, cargo_description,
-	consignee_country from tabTransaction where docstatus != 2 %s""" % conditions, filters)
+	consignee_country from tabTransaction where docstatus < 2 %s""" % conditions, filters, as_dict=1)
 
 
 def get_conditions(filters):
 	conditions = ""
 	if filters.get("exporter_name"):
-		conditions += " and exporter_name LIKE '%%s%%'" % filters["exporter_name"]
+		# conditions += " and exporter_name LIKE '%%s%%'" % filters["exporter_name"]
+		conditions += " and exporter_name LIKE %(exporter_name)s"
 	
 	if filters.get("forwarder_name"):
 		conditions += " and forwarder_name LIKE '%%s%%'" % filters["forwarder_name"]
