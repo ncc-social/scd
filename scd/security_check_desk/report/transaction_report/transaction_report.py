@@ -58,7 +58,7 @@ def get_transactions(filters):
 
 
 def get_conditions(filters):
-	conditions = ""
+	conditions = []
 	if filters.get("exporter_name"):
 		conditions += " and exporter_name LIKE '%%s%%'" % filters["exporter_name"]
 	
