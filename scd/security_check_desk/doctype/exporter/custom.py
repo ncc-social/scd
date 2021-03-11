@@ -33,3 +33,19 @@ def create_forwarder(docname):
     new_forwarder.photo_id = exporter_info.photo_id
     new_forwarder.fingerprint_impressions = exporter_info.fingerprint_impressions
     return new_forwarder.as_dict()
+
+@frappe.whitelist()
+def get_events(start, end, filters=None):
+	"""Returns events for Gantt / Calendar view rendering.
+	:param start: Start date-time.
+	:param end: End date-time.
+	:param filters: Filters (JSON).
+	"""
+	# from frappe.desk.calendar import get_event_conditions
+	# conditions = get_event_conditions("Workshop", filters)
+
+	data = frappe.db.sql("""select name, exporter_name, 
+        concat(year(curdate()),"-", DATE_FORMAT(date_of_birth,'%m-%d')) as birthday 
+        from tabExporter"""), as_dict=True)
+
+	return data

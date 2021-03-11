@@ -7,11 +7,11 @@ frappe.views.calendar["Exporter"] = {
 		}
 	},
     field_map: {
-		"start": "date_of_birth",
-		"end": "date_of_birth",
+		"start": "birthday",
+		"end": "birthday",
 		"id": "name",
 		"title": "exporter_name",
 		"allDay": "allDay"
-	}
-	// get_events_method: "frappe.desk.calendar.get_events",
+	},
+	get_events_method: "scd.security_check_desk.doctype.exporter.custom.get_events",
 };
