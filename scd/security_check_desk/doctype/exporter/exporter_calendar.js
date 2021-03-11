@@ -11,8 +11,7 @@ frappe.views.calendar["Exporter"] = {
 		"end": "birthday",
 		"id": "name",
 		"title": "exporter_name",
-		"allDay": "allDay",
-		"color": "red"
+		"allDay": "allDay"
 	},
 	get_events_method: "scd.security_check_desk.doctype.exporter.custom.get_events",
 };
