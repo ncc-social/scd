@@ -12,6 +12,6 @@ frappe.views.calendar["Exporter"] = {
 		"id": "name",
 		"title": "exporter_name",
 		"allDay": "allDay"
-	}
-	// get_events_method: "erpnext.hr.doctype.attendance.attendance.get_events"
+	},
+	get_events_method: "frappe.desk.calendar.get_events",
 };
