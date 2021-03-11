@@ -11,8 +11,7 @@ frappe.views.calendar["Exporter"] = {
 		"end": "date_of_birth",
 		"id": "name",
 		"title": "exporter_name",
-		"status": "status",
-        "allDay": "allDay"
+		"allDay": "allDay"
 	}
 	// get_events_method: "erpnext.hr.doctype.attendance.attendance.get_events"
 };
