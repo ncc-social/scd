@@ -46,6 +46,6 @@ def get_events(start, end, filters=None):
 
 	data = frappe.db.sql("""select name, exporter_name, 
         concat(year(curdate()),"-", DATE_FORMAT(date_of_birth,'%m-%d')) as birthday 
-        from tabExporter"""), as_dict=True)
+        from tabExporter""", as_dict=True)
 
 	return data
