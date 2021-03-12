@@ -14,7 +14,7 @@ frappe.views.calendar["Exporter"] = {
 		"allDay": "allDay"
 	},
 	gantt: { // The values set here will override the values set in the object just for Gantt View
-        order_by: "birthday"
-    }
+        order_by: "birthday",
+    },
 	get_events_method: "scd.security_check_desk.doctype.exporter.custom.get_events",
 };
