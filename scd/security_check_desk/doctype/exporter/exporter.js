@@ -23,28 +23,3 @@ frappe.ui.form.on(cur_frm.doctype, {
     }   
 });
 
-
-frappe.ui.form.on(cur_frm.doctype, {
-    refresh: function(frm) {
-        if(!frm.is_new()) {
-            frm.add_custom_button(__('As Forwarder'), function() {
-                frm.events.create_forwarder(frm);
-            }, __('Create'));
-            frm.page.set_inner_btn_group_as_primary(__('Create'));
-        }
-    },
-
-    create_forwarder: function(frm){
-        frappe.call({
-            method: "scd.security_check_desk.doctype.exporter.custom.create_forwarder",
-            args:{
-                docname: frm.doc.name
-            },
-            callback: function(r){
-                var doc = frappe.model.sync(r.message);
-                frappe.set_route('Form', 'Forwarder', r.message.name);
-            }
-        });
-    }
-});
-
