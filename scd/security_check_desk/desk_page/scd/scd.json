@@ -14,7 +14,7 @@
  "is_default": 0,
  "is_standard": 1,
  "label": "SCD",
- "modified": "2021-03-12 16:38:33.454236",
+ "modified": "2021-03-27 07:20:37.967951",
  "modified_by": "Administrator",
  "module": "Security Check Desk",
  "name": "SCD",
@@ -53,7 +53,7 @@
    "type": "DocType"
   },
   {
-   "color": "#5e3aa8",
+   "color": "#ffd7d7",
    "doc_view": "List",
    "format": "{} Tagged",
    "label": "Cargo Import",
