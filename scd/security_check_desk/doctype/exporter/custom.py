@@ -15,7 +15,7 @@ def get_events(start, end, filters=None):
 	# from frappe.desk.calendar import get_event_conditions
 	# conditions = get_event_conditions("Workshop", filters)
 
-	data = frappe.db.sql("""select name, forwarder_name, 
+	data = frappe.db.sql("""select name, exporter_name, 
         concat(year(curdate()),"-", DATE_FORMAT(date_of_birth,'%m-%d')) as birthday 
         from tabExporter order by birthday""", as_dict=True)
 
