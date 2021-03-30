@@ -31,10 +31,9 @@ frappe.ui.form.on(cur_frm.doctype, {
 frappe.ui.form.on(cur_frm.doctype, {
     refresh: function(frm) {
         if(!frm.is_new()) {
-            frm.add_custom_button(__('As Exporter'), function() {
+            cur_frm.add_custom_button(__("Create as Exporter"), function() {
                 frm.events.create_exporter(frm);
-            }, __('Create'));
-            frm.page.set_inner_btn_group_as_primary(__('Create'));
+            });
         }
     },
 
