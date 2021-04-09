@@ -5,4 +5,12 @@ frappe.listview_settings['Cargo Import'] = {
 		indicator[1] = {"Tagged": "red", "Untagged": "blue"}[doc.status];
 		return indicator;
 	}
+	// get_indicator(doc) {
+    //     // customize indicator color
+    //     if (doc.status) {
+    //         return [__("Tagged"), "red", "status,=,Tagged"];
+    //     } else {
+    //         return [__("Untagged"), "darkgrey", "status,=,Untagged"];
+    //     }
+    // }
 };
